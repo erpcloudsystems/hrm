@@ -1,0 +1,44 @@
+{
+ "creation": "2020-10-02 15:07:02.577874",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "reason",
+  "additional_amount",
+  "deduction_amount"
+ ],
+ "fields": [
+  {
+   "fieldname": "reason",
+   "fieldtype": "Small Text",
+   "in_list_view": 1,
+   "label": "Reason",
+   "reqd": 1
+  },
+  {
+   "fieldname": "additional_amount",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "Additional Amount",
+   "options": "Company:company:default_currency"
+  },
+  {
+   "fieldname": "deduction_amount",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "Deduction Amount",
+   "options": "Company:company:default_currency"
+  }
+ ],
+ "istable": 1,
+ "modified": "2020-10-02 15:09:36.394725",
+ "modified_by": "Administrator",
+ "module": "HRM",
+ "name": "Service Closing Adjustment",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

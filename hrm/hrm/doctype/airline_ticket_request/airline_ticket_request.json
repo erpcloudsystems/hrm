@@ -1,0 +1,211 @@
+{
+ "autoname": "TCK-.#####",
+ "creation": "2018-05-28 11:03:53.310771",
+ "doctype": "DocType",
+ "document_type": "Document",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "employee",
+  "employee_name",
+  "reason",
+  "travel_period",
+  "from_date",
+  "column_break_7",
+  "to_date",
+  "section_break_8",
+  "number_of_eligible_tickets",
+  "airline_agent",
+  "agent_name",
+  "column_break_14",
+  "available_tickets",
+  "section_break_16",
+  "passenger_names",
+  "airport_details",
+  "origin_airport",
+  "destination_airport",
+  "column_break_21",
+  "class",
+  "section_break_23",
+  "instruction_to_airline_agent",
+  "column_break_25",
+  "remarks",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "depends_on": "employee",
+   "fetch_from": "employee.employee_name",
+   "fieldname": "employee_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Employee Name",
+   "read_only": 1
+  },
+  {
+   "fieldname": "reason",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Reason ",
+   "options": "\nVacation\nOfficial Tours",
+   "reqd": 1,
+   "width": "100"
+  },
+  {
+   "fieldname": "travel_period",
+   "fieldtype": "Section Break",
+   "label": "Travel Period"
+  },
+  {
+   "fieldname": "from_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "From Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_7",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "to_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "To date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "section_break_8",
+   "fieldtype": "Section Break"
+  },
+  {
+   "default": "1",
+   "fieldname": "number_of_eligible_tickets",
+   "fieldtype": "Int",
+   "label": "Number of eligible tickets",
+   "reqd": 1
+  },
+  {
+   "fieldname": "airline_agent",
+   "fieldtype": "Link",
+   "label": "Airline Agent",
+   "options": "Airline Travel Agent",
+   "reqd": 1
+  },
+  {
+   "depends_on": "airline_agent",
+   "fetch_from": "airline_agent.name1",
+   "fieldname": "agent_name",
+   "fieldtype": "Data",
+   "label": "Agent Name",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_14",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "available_tickets",
+   "fieldtype": "Int",
+   "label": "Available Tickets",
+   "read_only": 1
+  },
+  {
+   "fieldname": "section_break_16",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "passenger_names",
+   "fieldtype": "Small Text",
+   "label": "Passenger Names"
+  },
+  {
+   "fieldname": "airport_details",
+   "fieldtype": "Section Break",
+   "label": "Airport Details"
+  },
+  {
+   "fieldname": "column_break_21",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "class",
+   "fieldtype": "Select",
+   "label": "Class",
+   "options": "\nBusiness\nEconomy\nSpecial",
+   "reqd": 1
+  },
+  {
+   "fieldname": "section_break_23",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "instruction_to_airline_agent",
+   "fieldtype": "Small Text",
+   "label": "Instruction to Airline Agent"
+  },
+  {
+   "fieldname": "remarks",
+   "fieldtype": "Small Text",
+   "label": "Remarks"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Airline Ticket Request",
+   "print_hide": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "employee",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Employee",
+   "options": "Employee",
+   "reqd": 1
+  },
+  {
+   "fieldname": "origin_airport",
+   "fieldtype": "Data",
+   "label": "Origin Airport",
+   "reqd": 1
+  },
+  {
+   "fieldname": "destination_airport",
+   "fieldtype": "Data",
+   "label": "Destination Airport",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_25",
+   "fieldtype": "Column Break"
+  }
+ ],
+ "is_submittable": 1,
+ "modified": "2020-11-24 13:31:08.806489",
+ "modified_by": "Administrator",
+ "module": "HRM",
+ "name": "Airline Ticket Request",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

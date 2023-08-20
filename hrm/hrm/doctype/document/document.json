@@ -1,0 +1,37 @@
+{
+ "creation": "2020-09-08 10:44:14.856802",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "document",
+  "attachment"
+ ],
+ "fields": [
+  {
+   "fieldname": "document",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Document",
+   "read_only": 1,
+   "reqd": 1
+  },
+  {
+   "fieldname": "attachment",
+   "fieldtype": "Attach",
+   "in_list_view": 1,
+   "label": "Attachment",
+   "reqd": 1
+  }
+ ],
+ "istable": 1,
+ "modified": "2020-09-08 11:19:20.472965",
+ "modified_by": "Administrator",
+ "module": "HRM",
+ "name": "Document",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

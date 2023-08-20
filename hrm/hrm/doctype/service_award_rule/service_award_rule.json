@@ -1,0 +1,90 @@
+{
+ "autoname": "SAR-.#####",
+ "creation": "2019-01-25 15:24:18.811871",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "company",
+  "column_break_2",
+  "effective_from",
+  "eos_type",
+  "details",
+  "service_award_details",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "company",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Company ",
+   "options": "Company",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_2",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "details",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "service_award_details",
+   "fieldtype": "Table",
+   "label": "Benefit Type Details",
+   "options": "Service Award Details"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Service Award Rule",
+   "print_hide": 1,
+   "read_only": 1
+  },
+  {
+   "default": "Today",
+   "fieldname": "effective_from",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Effective From",
+   "reqd": 1
+  },
+  {
+   "fieldname": "eos_type",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "End of Service Type",
+   "options": "EOS Master",
+   "reqd": 1
+  }
+ ],
+ "is_submittable": 1,
+ "modified": "2020-11-19 09:56:58.624752",
+ "modified_by": "Administrator",
+ "module": "HRM",
+ "name": "Service Award Rule",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "search_fields": "eos_type",
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "title_field": "eos_type",
+ "track_changes": 1
+}

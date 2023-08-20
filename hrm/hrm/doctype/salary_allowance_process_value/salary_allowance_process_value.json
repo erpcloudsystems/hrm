@@ -1,0 +1,128 @@
+{
+ "autoname": "format:SSAV-{YY}-{#####}",
+ "creation": "2018-07-02 09:40:58.194402",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "company",
+  "employee",
+  "employee_name",
+  "column_break_4",
+  "allowance_type",
+  "payroll_period",
+  "start_date",
+  "end_date",
+  "section_break_10",
+  "salary_component",
+  "column_break_11",
+  "value"
+ ],
+ "fields": [
+  {
+   "fetch_from": "employee__id.employee_name",
+   "fieldname": "employee_name",
+   "fieldtype": "Data",
+   "label": "Employee Name",
+   "read_only": 1
+  },
+  {
+   "fieldname": "allowance_type",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Allowance Type",
+   "options": "Monthly\nDaily",
+   "read_only": 1
+  },
+  {
+   "fieldname": "salary_component",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Salary Component",
+   "options": "Salary Component",
+   "read_only": 1,
+   "reqd": 1
+  },
+  {
+   "fieldname": "payroll_period",
+   "fieldtype": "Link",
+   "in_standard_filter": 1,
+   "label": "Payroll Period",
+   "options": "Payroll Period",
+   "read_only": 1
+  },
+  {
+   "fieldname": "start_date",
+   "fieldtype": "Date",
+   "in_standard_filter": 1,
+   "label": "Start Date",
+   "read_only": 1
+  },
+  {
+   "fieldname": "end_date",
+   "fieldtype": "Date",
+   "label": "End Date",
+   "read_only": 1
+  },
+  {
+   "fieldname": "value",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Value",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "employee__id.company",
+   "fetch_if_empty": 1,
+   "fieldname": "company",
+   "fieldtype": "Link",
+   "label": "Company",
+   "options": "Company",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_4",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_10",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_11",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "employee",
+   "fieldtype": "Link",
+   "in_standard_filter": 1,
+   "label": "Employee ID",
+   "options": "Employee",
+   "read_only": 1,
+   "reqd": 1
+  }
+ ],
+ "modified": "2020-06-05 17:19:34.718794",
+ "modified_by": "Administrator",
+ "module": "HRM",
+ "name": "Salary Allowance Process Value",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "title_field": "employee_name",
+ "track_changes": 1
+}

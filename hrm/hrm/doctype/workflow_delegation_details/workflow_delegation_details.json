@@ -1,0 +1,69 @@
+{
+ "creation": "2021-06-22 10:10:42.645599",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "workflow_name",
+  "workflow_doctype",
+  "user_role",
+  "column_break_4",
+  "delegated_role",
+  "user_email_id"
+ ],
+ "fields": [
+  {
+   "fieldname": "workflow_name",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Workflow Name",
+   "options": "Workflow",
+   "read_only": 1
+  },
+  {
+   "fieldname": "workflow_doctype",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": " Workflow Doctype",
+   "read_only": 1
+  },
+  {
+   "fieldname": "user_role",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": " User Role",
+   "options": "Role",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_4",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "delegated_role",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Assign To",
+   "options": "User"
+  },
+  {
+   "fetch_from": "delegated_role.username",
+   "fieldname": "user_email_id",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "User Name",
+   "read_only": 1
+  }
+ ],
+ "istable": 1,
+ "modified": "2021-06-30 09:43:29.916458",
+ "modified_by": "Administrator",
+ "module": "HRM",
+ "name": "Workflow Delegation Details",
+ "owner": "Administrator",
+ "permissions": [],
+ "quick_entry": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

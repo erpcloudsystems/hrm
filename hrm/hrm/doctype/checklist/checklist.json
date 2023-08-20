@@ -1,0 +1,28 @@
+{
+ "creation": "2020-09-05 14:07:01.362268",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "document"
+ ],
+ "fields": [
+  {
+   "fieldname": "document",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Document",
+   "reqd": 1
+  }
+ ],
+ "istable": 1,
+ "modified": "2020-09-05 14:07:01.362268",
+ "modified_by": "Administrator",
+ "module": "HRM",
+ "name": "Checklist",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

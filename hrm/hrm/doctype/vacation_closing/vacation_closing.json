@@ -1,0 +1,399 @@
+{
+ "allow_copy": 1,
+ "autoname": "VC-.#####",
+ "creation": "2019-01-25 15:59:39.413086",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "company",
+  "company_abbreviation",
+  "leave_application_reference",
+  "employee_code_hidden",
+  "employee",
+  "employee_name",
+  "column_break_1",
+  "entry_date",
+  "iquama_no",
+  "nationality",
+  "vacation_closing_details",
+  "joining_date",
+  "leave_from",
+  "salary_start_date",
+  "vacation_days",
+  "attendance_days",
+  "previous_leave_balance",
+  "total_leave_balance",
+  "advance_amount",
+  "column_break_7",
+  "last_rejoining_date",
+  "leave_to",
+  "salary_end_date",
+  "enable_salary_date",
+  "basic_salary",
+  "salary_processed_amount",
+  "present_day_salary",
+  "different_ticket",
+  "grand_total",
+  "note",
+  "earning",
+  "earnings",
+  "deduction",
+  "deductions",
+  "repayment_information",
+  "repayment_date",
+  "ignore_account_effect",
+  "column_break_33",
+  "employee_loan_reference",
+  "journal_voucher",
+  "account_info",
+  "mode_of_payment",
+  "payment_account",
+  "column_break_23",
+  "employee_loan_account",
+  "interest_income_account",
+  "section_break_33",
+  "temp_reference",
+  "temp_ref",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "company",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Company",
+   "options": "Company",
+   "reqd": 1
+  },
+  {
+   "fieldname": "company_abbreviation",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "Company Abbreviation",
+   "options": "company.series"
+  },
+  {
+   "fieldname": "leave_application_reference",
+   "fieldtype": "Link",
+   "label": "Vacation Leave Application",
+   "options": "Vacation Leave Application",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "leave_application_reference.employee_id",
+   "fieldname": "employee_code_hidden",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "employee_code_hidden"
+  },
+  {
+   "depends_on": "leave_application_reference",
+   "fetch_from": "leave_application_reference.employee_id",
+   "fieldname": "employee",
+   "fieldtype": "Link",
+   "label": "Employee",
+   "options": "Employee",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "Today",
+   "fieldname": "entry_date",
+   "fieldtype": "Date",
+   "label": "Entry Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "iquama_no",
+   "fieldtype": "Read Only",
+   "label": "Iquama No."
+  },
+  {
+   "fieldname": "nationality",
+   "fieldtype": "Data",
+   "label": "Nationality",
+   "read_only": 1
+  },
+  {
+   "collapsible": 1,
+   "collapsible_depends_on": "eval:doc.leave_application_reference",
+   "fieldname": "vacation_closing_details",
+   "fieldtype": "Section Break",
+   "label": "Vacation Closing Details"
+  },
+  {
+   "fieldname": "joining_date",
+   "fieldtype": "Read Only",
+   "label": "Company Joining Date"
+  },
+  {
+   "fetch_from": "leave_application_reference.from_date",
+   "fieldname": "leave_from",
+   "fieldtype": "Read Only",
+   "label": "Leave From"
+  },
+  {
+   "fieldname": "salary_start_date",
+   "fieldtype": "Date",
+   "label": "Salary Start Date",
+   "read_only": 1
+  },
+  {
+   "fieldname": "vacation_days",
+   "fieldtype": "Float",
+   "label": "Vacation Availed Days",
+   "read_only": 1
+  },
+  {
+   "fieldname": "attendance_days",
+   "fieldtype": "Float",
+   "label": "Attendance Days (Present)",
+   "read_only": 1
+  },
+  {
+   "fieldname": "previous_leave_balance",
+   "fieldtype": "Float",
+   "hidden": 1,
+   "label": "Previous leave balance"
+  },
+  {
+   "fieldname": "total_leave_balance",
+   "fieldtype": "Float",
+   "label": "Available Vacation Balance",
+   "read_only": 1
+  },
+  {
+   "fieldname": "advance_amount",
+   "fieldtype": "Currency",
+   "label": "Advance Amount",
+   "options": "Company:company:default_currency"
+  },
+  {
+   "fieldname": "column_break_7",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "last_rejoining_date",
+   "fieldtype": "Read Only",
+   "label": "Last Vacation Rejoining Date",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "leave_application_reference.to_date",
+   "fieldname": "leave_to",
+   "fieldtype": "Read Only",
+   "label": "Leave To",
+   "read_only": 1
+  },
+  {
+   "fieldname": "salary_end_date",
+   "fieldtype": "Date",
+   "label": "Salary End Date"
+  },
+  {
+   "default": "0",
+   "fieldname": "enable_salary_date",
+   "fieldtype": "Check",
+   "label": "Enable Salary End Date"
+  },
+  {
+   "fieldname": "basic_salary",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "Basic Salary"
+  },
+  {
+   "fieldname": "salary_processed_amount",
+   "fieldtype": "Currency",
+   "label": "Vacation Salary",
+   "options": "Company:company:default_currency",
+   "read_only": 1
+  },
+  {
+   "fieldname": "present_day_salary",
+   "fieldtype": "Currency",
+   "label": "Current Period Salary",
+   "options": "Company:company:default_currency",
+   "read_only": 1
+  },
+  {
+   "fieldname": "different_ticket",
+   "fieldtype": "Currency",
+   "label": "Different Ticket",
+   "options": "Company:company:default_currency"
+  },
+  {
+   "fieldname": "grand_total",
+   "fieldtype": "Currency",
+   "label": "Grand Total",
+   "options": "Company:company:default_currency",
+   "read_only": 1
+  },
+  {
+   "fieldname": "note",
+   "fieldtype": "Small Text",
+   "label": "Note"
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "earning",
+   "fieldtype": "Section Break",
+   "label": "Earning"
+  },
+  {
+   "fieldname": "earnings",
+   "fieldtype": "Table",
+   "label": "Earnings",
+   "options": "Vacation Closing Component"
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "deduction",
+   "fieldtype": "Section Break",
+   "label": "Deduction"
+  },
+  {
+   "fieldname": "deductions",
+   "fieldtype": "Table",
+   "label": "Deductions",
+   "options": "Vacation Closing Component"
+  },
+  {
+   "fieldname": "repayment_information",
+   "fieldtype": "Section Break",
+   "label": "Repayment Information"
+  },
+  {
+   "fieldname": "repayment_date",
+   "fieldtype": "Date",
+   "label": "Disbursement Date",
+   "options": " ",
+   "reqd": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "ignore_account_effect",
+   "fieldtype": "Check",
+   "label": "Ignore Account Effect"
+  },
+  {
+   "fieldname": "column_break_33",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "employee_loan_reference",
+   "fieldtype": "Link",
+   "label": "Employee Loan Reference",
+   "options": "Loan",
+   "read_only": 1
+  },
+  {
+   "fieldname": "journal_voucher",
+   "fieldtype": "Link",
+   "label": "Journal Voucher",
+   "options": "Journal Entry",
+   "read_only": 1
+  },
+  {
+   "collapsible": 1,
+   "depends_on": "eval:!doc.ignore_account_effect",
+   "fieldname": "account_info",
+   "fieldtype": "Section Break",
+   "label": "Account Info"
+  },
+  {
+   "fieldname": "mode_of_payment",
+   "fieldtype": "Link",
+   "label": "Mode of Payment",
+   "options": "Mode of Payment",
+   "permlevel": 1
+  },
+  {
+   "fieldname": "payment_account",
+   "fieldtype": "Link",
+   "label": "Payment Account ",
+   "options": "Account",
+   "permlevel": 1
+  },
+  {
+   "fieldname": "column_break_23",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "employee_loan_account",
+   "fieldtype": "Link",
+   "label": "Employee Loan Account",
+   "options": "Account",
+   "permlevel": 1
+  },
+  {
+   "fieldname": "interest_income_account",
+   "fieldtype": "Link",
+   "label": "Interest Income Account",
+   "options": "Account",
+   "permlevel": 1
+  },
+  {
+   "fieldname": "section_break_33",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Vacation Closing",
+   "print_hide": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "temp_reference",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "Temp Reference"
+  },
+  {
+   "fieldname": "temp_ref",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "Temp Ref"
+  },
+  {
+   "depends_on": "leave_application_reference",
+   "fetch_from": "leave_application_reference.employee_name",
+   "fieldname": "employee_name",
+   "fieldtype": "Data",
+   "label": "Employee Name",
+   "read_only": 1
+  }
+ ],
+ "is_submittable": 1,
+ "modified": "2020-10-06 13:57:56.655843",
+ "modified_by": "Administrator",
+ "module": "HRM",
+ "name": "Vacation Closing",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "cancel": 1,
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

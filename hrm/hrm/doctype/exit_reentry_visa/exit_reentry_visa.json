@@ -1,0 +1,163 @@
+{
+ "autoname": "RE/.#####",
+ "creation": "2018-05-30 09:16:33.279800",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "employee",
+  "employee_name",
+  "reason",
+  "travel_period",
+  "from_date",
+  "column_break_6",
+  "to_date",
+  "section_break_7",
+  "airline_agent",
+  "agent_name",
+  "number_of_reentries_required",
+  "passenger_names",
+  "section_break_11",
+  "remarks",
+  "status",
+  "re_entry_last_date",
+  "reentry_duration_in_months",
+  "reentry_charges"
+ ],
+ "fields": [
+  {
+   "fieldname": "employee",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Employee",
+   "options": "Employee",
+   "reqd": 1
+  },
+  {
+   "depends_on": "employee",
+   "fetch_from": "employee.employee_name",
+   "fieldname": "employee_name",
+   "fieldtype": "Data",
+   "label": "Employee Name",
+   "read_only": 1
+  },
+  {
+   "fieldname": "reason",
+   "fieldtype": "Select",
+   "label": "Reason",
+   "options": "\nVacation\nOfficial Tours",
+   "reqd": 1
+  },
+  {
+   "fieldname": "travel_period",
+   "fieldtype": "Section Break",
+   "label": "Travel Period"
+  },
+  {
+   "fieldname": "from_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "From Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_6",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "to_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "To Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "section_break_7",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "airline_agent",
+   "fieldtype": "Link",
+   "label": "Airline Agent",
+   "options": "Airline Travel Agent",
+   "reqd": 1
+  },
+  {
+   "depends_on": "airline_agent",
+   "fetch_from": "airline_agent.name1",
+   "fieldname": "agent_name",
+   "fieldtype": "Data",
+   "label": "Agent Name",
+   "read_only": 1
+  },
+  {
+   "default": "1",
+   "fieldname": "number_of_reentries_required",
+   "fieldtype": "Int",
+   "label": "Number of Re-entries required"
+  },
+  {
+   "fieldname": "passenger_names",
+   "fieldtype": "Small Text",
+   "label": "Passenger Names"
+  },
+  {
+   "fieldname": "section_break_11",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "remarks",
+   "fieldtype": "Text",
+   "label": "Remarks"
+  },
+  {
+   "default": "Open",
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Status",
+   "options": "\nOpen\nApplied\nReceived\nCancel\nClose",
+   "reqd": 1
+  },
+  {
+   "fieldname": "re_entry_last_date",
+   "fieldtype": "Date",
+   "label": "Re-Entry Last Date"
+  },
+  {
+   "fieldname": "reentry_duration_in_months",
+   "fieldtype": "Int",
+   "label": "Re-Entry Duration In Months"
+  },
+  {
+   "fieldname": "reentry_charges",
+   "fieldtype": "Float",
+   "label": "Re-Entry charges"
+  }
+ ],
+ "modified": "2020-09-28 15:30:45.140803",
+ "modified_by": "Administrator",
+ "module": "HRM",
+ "name": "Exit ReEntry Visa",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "show_name_in_global_search": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "timeline_field": "employee",
+ "track_changes": 1
+}

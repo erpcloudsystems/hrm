@@ -1,0 +1,67 @@
+{
+ "creation": "2020-09-08 11:25:41.839568",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "days",
+  "eligible_compensation",
+  "approved_compensation",
+  "from_date",
+  "to_date",
+  "leave_rule"
+ ],
+ "fields": [
+  {
+   "fieldname": "days",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Leave Days",
+   "read_only": 1
+  },
+  {
+   "fieldname": "approved_compensation",
+   "fieldtype": "Percent",
+   "in_list_view": 1,
+   "label": "Approved Compensation",
+   "permlevel": 1,
+   "reqd": 1
+  },
+  {
+   "fieldname": "eligible_compensation",
+   "fieldtype": "Percent",
+   "in_list_view": 1,
+   "label": "Eligible Compensation",
+   "read_only": 1
+  },
+  {
+   "fieldname": "from_date",
+   "fieldtype": "Date",
+   "label": "From Date",
+   "read_only": 1
+  },
+  {
+   "fieldname": "to_date",
+   "fieldtype": "Date",
+   "label": "To Date",
+   "read_only": 1
+  },
+  {
+   "fieldname": "leave_rule",
+   "fieldtype": "Link",
+   "label": "Leave Rule",
+   "options": "Leave Rule",
+   "read_only": 1
+  }
+ ],
+ "istable": 1,
+ "modified": "2020-09-22 11:10:53.825045",
+ "modified_by": "Administrator",
+ "module": "HRM",
+ "name": "Leave Compensation Slab",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

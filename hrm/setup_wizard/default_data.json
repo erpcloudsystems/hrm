@@ -1,0 +1,471 @@
+[
+	{
+		"doctype":"Leave Type",
+		"data" :[
+			{
+				"leave_type_name": "Sick Leave",
+				"leave_type_abbr": "SL",
+				"max_continuous_days_allowed": 120,
+				"allow_negative": "1",
+				"include_holiday": "1",
+				"exclude_from_vacation_leave_count": "0"
+			},
+			{
+				"leave_type_name": "Maternity Leave",
+				"leave_type_abbr": "ML",
+				"max_continuous_days_allowed": 70,
+				"allow_negative": "1",
+				"include_holiday": "1",
+				"exclude_from_vacation_leave_count": "0"
+			},
+			{
+				"leave_type_name": "Absent",
+				"leave_type_abbr": "A",
+				"max_continuous_days_allowed": 70,
+				"allow_negative": "1",
+				"include_holiday": "1",
+				"exclude_from_vacation_leave_count": "0"
+			},
+			{
+				"leave_type_name": "Paternity Leave",
+				"leave_type_abbr": "PL",
+				"max_continuous_days_allowed": 4,
+				"allow_negative": "1",
+				"include_holiday": "1",
+				"exclude_from_vacation_leave_count": "0"
+			},
+			{
+				"leave_type_name": "Hajj Leave",
+				"leave_type_abbr": "HL",
+				"max_continuous_days_allowed": 10,
+				"allow_negative": "1",
+				"include_holiday": "1",
+				"exclude_from_vacation_leave_count": "0"
+			},
+			{
+				"leave_type_name": "Husband demise Leave",
+				"leave_type_abbr": "HDL",
+				"max_continuous_days_allowed": 0,
+				"allow_negative": "1",
+				"include_holiday": "1",
+				"exclude_from_vacation_leave_count": "0"
+			},
+			{
+				"leave_type_name": "Demise of a Family member",
+				"leave_type_abbr": "DFML",
+				"max_continuous_days_allowed": 2,
+				"allow_negative": "1",
+				"include_holiday": "1",
+				"exclude_from_vacation_leave_count": "0"
+			},
+			{
+				"leave_type_name": "Marriage Leave",
+				"leave_type_abbr": "MarriageL",
+				"max_continuous_days_allowed": 3,
+				"allow_negative": "1",
+				"include_holiday": "1",
+				"exclude_from_vacation_leave_count": "0"
+			},
+			{
+				"leave_type_name": "Vacation",
+				"leave_type_abbr": "V",
+				"max_continuous_days_allowed": 0,
+				"allow_negative": "1",
+				"include_holiday": "1",
+				"exclude_from_vacation_leave_count": "0"
+			},
+			{
+				"leave_type_name": "Overtime",
+				"leave_type_abbr": "OT",
+				"max_continuous_days_allowed": 0,
+				"allow_negative": "1",
+				"include_holiday": "1",
+				"exclude_from_vacation_leave_count": "0"
+			},
+			{
+				"leave_type_name": "Early Going",
+				"leave_type_abbr": "EG",
+				"max_continuous_days_allowed": 0,
+				"allow_negative": "1",
+				"include_holiday": "1",
+				"exclude_from_vacation_leave_count": "0"
+			},
+			{
+				"leave_type_name": "Late Coming",
+				"leave_type_abbr": "LC",
+				"max_continuous_days_allowed": 0,
+				"allow_negative": "1",
+				"include_holiday": "1",
+				"exclude_from_vacation_leave_count": "0"
+			},
+			{
+				"leave_type_name": "Weekoff",
+				"leave_type_abbr": "WO",
+				"max_continuous_days_allowed": 0,
+				"allow_negative": "1",
+				"include_holiday": "1",
+				"exclude_from_vacation_leave_count": "0"
+			},
+			{
+				"leave_type_name": "Exam Leave",
+				"leave_type_abbr": "EL",
+				"max_continuous_days_allowed": 0,
+				"allow_negative": "1",
+				"include_holiday": "1",
+				"exclude_from_vacation_leave_count": "0"
+			},
+			{
+				"leave_type_name": "Holiday Leave",
+				"leave_type_abbr": "H",
+				"max_continuous_days_allowed": 0,
+				"allow_negative": "1",
+				"include_holiday": "0",
+				"exclude_from_vacation_leave_count": "0"
+			}
+		]
+	},
+	{
+		"doctype":"Leave Rule",
+		"data" :[
+			{
+				"leave_type": "Sick Leave",
+				"effective_from": "2020-01-01",
+				"is_slab_applicable": "1",
+				"frequency_based_on": "Number of Days availed",
+				"compensation_rule": [{
+					"starting_unit": 1,
+					"ending_unit": 30,
+					"percentage_of_compensation": 100
+				},
+				{
+					"starting_unit":31,
+					"ending_unit": 90,
+					"percentage_of_compensation": 75
+				},
+				{
+					"starting_unit":91,
+					"ending_unit": 120,
+					"percentage_of_compensation": 0
+				}],
+				"checklist": [{
+					"document":"Medical Certificate"
+				}], 
+				"is_not_applicable_all_components": "0",
+				"max_leaves_allowed": 120,
+				"docstatus": 1
+			},
+			{
+				"leave_type": "Maternity Leave",
+				"effective_from": "2020-01-01",
+				"is_slab_applicable": "1",
+				"frequency_based_on": "Number of Years worked",
+				"gender": "Female",
+				"compensation_rule": [{
+					"starting_unit": 0,
+					"ending_unit": 1,
+					"percentage_of_compensation": 0
+					
+				},
+				
+				
+				{
+					"starting_unit": 1,
+					"ending_unit": 3,
+					"percentage_of_compensation": 50
+				},
+				{
+					"starting_unit": 3,
+					"ending_unit": 99,
+					"percentage_of_compensation": 100
+				}],
+				"checklist": [{
+					"document":"Medical Certificate"
+				}],
+				"is_not_applicable_all_components": "0",
+				"max_leaves_allowed": 99,
+				"docstatus": 1
+			},
+			{
+				"leave_type": "Paternity Leave",
+				"effective_from": "2020-01-01",
+				"is_slab_applicable": "1",
+				"frequency_based_on": "Number of Days availed",
+				"gender": "Male",
+				"compensation_rule": [{
+					"starting_unit": 1,
+					"ending_unit": 4,
+					"percentage_of_compensation": 100
+				}],
+				"checklist": [{
+					"document":"Medical Certificate"
+				}],
+				"is_not_applicable_all_components": "0",
+				"max_leaves_allowed": 4, 
+				"docstatus": 1
+			},
+			
+			
+			{
+				"leave_type": "Exam Leave",
+				"effective_from": "2020-01-01",
+				"is_slab_applicable": "0",
+				 "checklist": [{
+					"document":"Exam Hall ticket / Fee paid Receipt"
+				}],
+				"is_not_applicable_all_components": "0",
+				"max_leaves_allowed": 0,
+				"docstatus": 1
+			},
+			
+			{
+				"leave_type": "Hajj Leave",
+				"effective_from": "2020-01-01",
+				"is_slab_applicable": "1",
+				"frequency_based_on": "Number of Years worked",
+				"compensation_rule": [{
+					"starting_unit": 0,
+					"ending_unit": 2,
+					"percentage_of_compensation": 0
+				},
+				{
+					"starting_unit": 2,
+					"ending_unit": 99,
+					"percentage_of_compensation":100
+				}],
+				"checklist": [{
+					"document":"Fee paid confirmation"
+				}],
+				"is_not_applicable_all_components": "0",
+				"max_leaves_allowed": 99,
+				"docstatus": 1
+			},
+			{
+				"leave_type": "Husband demise Leave",
+				"effective_from": "2020-01-01",
+				"is_slab_applicable": "0",
+				"gender":"Female",
+				"checklist": [{
+					"document":"Medical Certificate"
+				}],
+				"is_not_applicable_all_components": "0",
+				"max_leaves_allowed": 0,
+				"docstatus": 1
+			},
+			{
+				"leave_type": "Demise of a Family member",
+				"effective_from": "2020-01-01",
+				"is_slab_applicable": "1",
+				"frequency_based_on": "Number of Days availed",
+				"compensation_rule": [{
+					"starting_unit": 1,
+					"ending_unit": 2,
+					"percentage_of_compensation": 100
+				}],
+			
+				"is_not_applicable_all_components": "0",
+				"max_leaves_allowed": 2,
+				"docstatus": 1
+			},
+			{
+				"leave_type": "Marriage Leave",
+				"effective_from": "2020-01-01",
+				"is_slab_applicable": "1",
+				"frequency_based_on": "Number of Days availed",
+				"compensation_rule": [{
+					"starting_unit": 1,
+					"ending_unit": 3,
+					"percentage_of_compensation": 0
+				}],
+				"checklist": [{
+					"document":"Copy of Marriage card"
+				}],
+				"is_not_applicable_all_components": "0",
+				"max_leaves_allowed": 3,
+				"docstatus": 1
+			},
+			{
+				"leave_type": "Overtime",
+				"effective_from": "2020-01-01",
+				"is_slab_applicable": "0",
+				"is_not_applicable_all_components": "0",
+				"compensation_rule": [{}],
+				"max_leaves_allowed": 0,
+				"docstatus": 1
+			},
+			{
+				"leave_type": "Early Going",
+				"effective_from": "2020-01-01",
+				"is_slab_applicable": "0",
+				"compensation_rule": [{}],
+				"checklist": [{
+					"document":"Medical Certificate"
+				}],
+				"is_not_applicable_all_components": "0",
+				"max_leaves_allowed": 0,
+				"docstatus": 1
+			},
+			{
+				"leave_type": "Late Coming",
+				"effective_from": "2020-01-01",
+				"is_slab_applicable": "0",
+				"is_not_applicable_all_components": "0",
+				"max_leaves_allowed": 0,
+				"docstatus": 1
+			},
+			{
+				"leave_type": "Weekoff",
+				"effective_from": "2020-01-01",
+				"is_slab_applicable": "0",
+				"is_not_applicable_all_components": "0",
+				"max_leaves_allowed": 0,
+				"docstatus": 1
+			},
+			{
+				"leave_type": "Absent",
+				"effective_from": "2020-01-01",
+				"is_slab_applicable": "0",
+				"is_not_applicable_all_components": "0",
+				"max_leaves_allowed": 0,
+				"docstatus": 1
+			}
+			
+		]
+		
+		
+	},
+	
+	{
+		"doctype":"EOS Master",
+		"data" :[
+			{
+				"name1": "Resign"
+			},
+			{
+				"name1": "End Contract"
+			},
+			{
+				"name1": "Termination"
+			}
+			
+		]
+		
+		
+	},
+	{
+		"doctype":"Benefit Type for EOS",
+		"data" :[
+			{
+				"name": "SBT-00001",
+				"benefit_type": "Bonus",
+				"effective_from":"20200101",
+				"is_not_applicable_all_components":"0",
+				"docstatus": 1 
+			}	
+		]
+	},
+	{
+		"doctype":"Service Award Rule",
+		"data" :[
+			{
+				"eos_type": "Resign",
+				"docstatus": 1,
+				"service_award_details": [{
+					"eos_benefit_type": "SBT-00001",
+					"tenure_upto": 720,
+					"formula": "EDAYS / 360.0*0"
+				},
+				{
+					"eos_benefit_type": "SBT-00001",
+					"tenure_upto": 1800,
+					"formula": "EDAYS / 360*.50*ECOMP/3"
+				},
+				{
+					"eos_benefit_type": "SBT-00001",
+					"tenure_upto": 3600,
+					"formula": "(1800/360.0*.5 * ECOMP)+((EDAYS-1800) /360.0*1* ECOMP )/3.0*2"
+				},
+				{
+					"eos_benefit_type": "SBT-00001",
+					"tenure_upto": 18000,
+					"formula": "(1800/360.0*.5 * ECOMP)+((EDAYS-1800) /360.0*1* ECOMP )/3.0*3"
+				}
+			]
+			}, 
+			{
+				"eos_type": "End Contract",
+				"docstatus": 1,
+				"service_award_details": [{
+					"eos_benefit_type": "SBT-00001",
+					"tenure_upto": 1800,
+					"formula": "EDAYS / 360.0*.50*ECOMP/3.0*3"
+				},
+				{
+					"eos_benefit_type": "SBT-00001",
+					"tenure_upto": 18000,
+					"formula": "(1800/360.0*.5 * ECOMP)+((EDAYS-1800) /360.0*1* ECOMP )/3*3"
+				}]
+			}
+		]
+	},
+	{
+		"doctype":"Salary Component",
+		"data" :[
+			{
+				"salary_component": "Overtime",
+				"salary_component_abbr":"OT",
+				"type":"Earning",
+				"is_payable":"1"
+			},
+			{
+				"salary_component": "Early Going",
+				"salary_component_abbr":"EG",
+				"type":"Deduction",
+				"is_payable":"1"
+			},
+			{
+				"salary_component": "Late Coming",
+				"salary_component_abbr":"LC",
+				"type":"Deduction",
+				"is_payable":"1"
+			},
+			{
+				"salary_component": "Absent",
+				"salary_component_abbr":"A",
+				"type":"Deduction",
+				"is_payable":"1"
+			},
+			{
+				"salary_component": "Other Deduction",
+				"salary_component_abbr":"OD",
+				"type":"Deduction",
+				"is_payable":"1"
+			}
+		
+		]
+	},
+	{
+		"doctype":"HR Settings",
+		"data" :[
+			{
+				"late_coming_action": "Creates an auto Late Coming Request",
+				"late_coming_component":"Late Coming",
+				"early_going_component":"Early Going",
+				"overtime_component":"Overtime"
+			}
+		
+		]
+	},
+	{
+		"doctype": "Translation",
+		"data": [
+			{
+				"source_name": "Human Resources",
+				"target_name": "HRM",
+				"language": "en"
+			}
+		]
+	}
+	
+	
+	
+]

@@ -1,0 +1,247 @@
+{
+ "allow_rename": 1,
+ "autoname": "naming_series:",
+ "creation": "2018-06-05 07:44:44.856903",
+ "doctype": "DocType",
+ "document_type": "Document",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "naming_series",
+  "complaint_id",
+  "complaint_date",
+  "column_break_3",
+  "employee",
+  "employee_name",
+  "complaint_reason",
+  "describe_the_nature_of_complaint",
+  "describe_action_can_be_taken_in_order_to_deal_with_complaint",
+  "incident_information",
+  "incident_reported_by",
+  "incident_reported_againce",
+  "column_break_9",
+  "victim",
+  "proof",
+  "witnesses_information",
+  "witnesses",
+  "__cplocation",
+  "incident_reports",
+  "incident_report",
+  "complaint_investigation",
+  "reported_to",
+  "investigation_reporter_name",
+  "complaint_investigated_by",
+  "column_break_23",
+  "investigation_start_on",
+  "investigation_end_on",
+  "vedict",
+  "investigation_report",
+  "investigation_reports",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "label": "Complaint ID",
+   "options": "CMP/",
+   "reqd": 1
+  },
+  {
+   "fieldname": "complaint_id",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "Complaint ID"
+  },
+  {
+   "fieldname": "complaint_date",
+   "fieldtype": "Date",
+   "label": "Complaint Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_3",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "employee",
+   "fieldtype": "Link",
+   "label": "Employee ",
+   "options": "Employee",
+   "reqd": 1
+  },
+  {
+   "fieldname": "employee_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Employee Name",
+   "read_only": 1
+  },
+  {
+   "fieldname": "complaint_reason",
+   "fieldtype": "Section Break",
+   "label": "Complaint Details"
+  },
+  {
+   "fieldname": "describe_the_nature_of_complaint",
+   "fieldtype": "Small Text",
+   "in_list_view": 1,
+   "label": "Describe the Nature Of Complaint",
+   "reqd": 1
+  },
+  {
+   "fieldname": "describe_action_can_be_taken_in_order_to_deal_with_complaint",
+   "fieldtype": "Small Text",
+   "in_list_view": 1,
+   "label": "Describe action can be taken in order to deal with complaint",
+   "reqd": 1
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "incident_information",
+   "fieldtype": "Section Break",
+   "label": "Incident Information"
+  },
+  {
+   "fieldname": "incident_reported_by",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Incident Reported By",
+   "reqd": 1
+  },
+  {
+   "fieldname": "incident_reported_againce",
+   "fieldtype": "Data",
+   "label": "Incident Reported Against",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_9",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "victim",
+   "fieldtype": "Data",
+   "label": "Victim"
+  },
+  {
+   "fieldname": "proof",
+   "fieldtype": "Small Text",
+   "label": "Proof",
+   "width": "20%"
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "witnesses_information",
+   "fieldtype": "Section Break",
+   "label": "Witnesses Information"
+  },
+  {
+   "fieldname": "witnesses",
+   "fieldtype": "Text Editor",
+   "label": "Witnesses",
+   "width": "50%"
+  },
+  {
+   "fieldname": "__cplocation",
+   "fieldtype": "Data",
+   "label": " Incident Location "
+  },
+  {
+   "fieldname": "incident_reports",
+   "fieldtype": "Section Break",
+   "label": "Incident Report"
+  },
+  {
+   "fieldname": "incident_report",
+   "fieldtype": "Text",
+   "label": "Incident Report Details",
+   "reqd": 1
+  },
+  {
+   "fieldname": "complaint_investigation",
+   "fieldtype": "Section Break",
+   "label": "Complaint Investigation"
+  },
+  {
+   "fieldname": "reported_to",
+   "fieldtype": "Link",
+   "label": "Investigation Reported To",
+   "options": "Employee"
+  },
+  {
+   "fieldname": "investigation_reporter_name",
+   "fieldtype": "Data",
+   "label": "Investigation Reported To(Name)"
+  },
+  {
+   "fieldname": "complaint_investigated_by",
+   "fieldtype": "Data",
+   "label": "Complaint Investigation Done By"
+  },
+  {
+   "fieldname": "column_break_23",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "investigation_start_on",
+   "fieldtype": "Date",
+   "label": "Investigation Start On Date"
+  },
+  {
+   "fieldname": "investigation_end_on",
+   "fieldtype": "Date",
+   "label": "Investigation End On Date"
+  },
+  {
+   "fieldname": "vedict",
+   "fieldtype": "Select",
+   "label": "Verdict",
+   "options": "\nGuilty\nNon-Guilty"
+  },
+  {
+   "fieldname": "investigation_report",
+   "fieldtype": "Section Break",
+   "label": "Investigation Report"
+  },
+  {
+   "fieldname": "investigation_reports",
+   "fieldtype": "Long Text",
+   "label": "Investigation Reports Details"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Employee Complaint Form",
+   "print_hide": 1,
+   "read_only": 1
+  }
+ ],
+ "is_submittable": 1,
+ "modified": "2019-12-25 15:58:32.014891",
+ "modified_by": "Administrator",
+ "module": "HRM",
+ "name": "Employee Complaint Form",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "show_name_in_global_search": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "title_field": "employee_name",
+ "track_changes": 1
+}

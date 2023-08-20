@@ -1,0 +1,279 @@
+{
+ "autoname": "VAP/.#####",
+ "creation": "2018-06-18 13:30:18.333394",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "status",
+  "leave_type",
+  "column_break_9",
+  "posting_date",
+  "company",
+  "section_break_5",
+  "employee_id",
+  "employee_name",
+  "column_break_8",
+  "eligible_days",
+  "used_days",
+  "total_available_vacation",
+  "section_break_11",
+  "request_advance_leave",
+  "from_date",
+  "eligible_from_date",
+  "eligible_to_date",
+  "to_date",
+  "total_leave_days",
+  "ignore_workflow_delegation",
+  "column_break_3",
+  "reason",
+  "section_break_13",
+  "applied_rule",
+  "column_break_15",
+  "last_vacation",
+  "column_break_17",
+  "total_working_days",
+  "section_break_14",
+  "leave_approver",
+  "leave_approver_name",
+  "vacation_closing_reference",
+  "warning_msg",
+  "amended_from",
+  "workflow_delegation_id"
+ ],
+ "fields": [
+  {
+   "default": "Open",
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "in_standard_filter": 1,
+   "label": "Status",
+   "no_copy": 1,
+   "options": "Open\nApproved\nRejected\nCancelled"
+  },
+  {
+   "fieldname": "leave_type",
+   "fieldtype": "Select",
+   "label": "Leave Type",
+   "options": "Vacation"
+  },
+  {
+   "fieldname": "column_break_9",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "Today",
+   "fieldname": "posting_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Posting Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "company",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Company",
+   "options": "Company",
+   "reqd": 1
+  },
+  {
+   "fieldname": "section_break_5",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "employee_id",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Employee ID",
+   "options": "Employee",
+   "reqd": 1
+  },
+  {
+   "fieldname": "employee_name",
+   "fieldtype": "Data",
+   "label": "Employee Name",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_8",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "eligible_days",
+   "fieldtype": "Float",
+   "label": "Eligible Days",
+   "precision": "3",
+   "read_only": 1
+  },
+  {
+   "fieldname": "used_days",
+   "fieldtype": "Int",
+   "hidden": 1,
+   "label": "Used Days"
+  },
+  {
+   "fieldname": "total_available_vacation",
+   "fieldtype": "Float",
+   "hidden": 1,
+   "label": "Total Available Vacation"
+  },
+  {
+   "fieldname": "section_break_11",
+   "fieldtype": "Section Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "request_advance_leave",
+   "fieldtype": "Check",
+   "hidden": 1,
+   "label": "Request Advance Leave"
+  },
+  {
+   "fieldname": "from_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "From Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "eligible_from_date",
+   "fieldtype": "Date",
+   "hidden": 1,
+   "label": "Eligible From Date"
+  },
+  {
+   "fieldname": "eligible_to_date",
+   "fieldtype": "Date",
+   "hidden": 1,
+   "label": "Eligible To Date"
+  },
+  {
+   "fieldname": "to_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "To Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "total_leave_days",
+   "fieldtype": "Int",
+   "label": "Total Leave Days",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_3",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "reason",
+   "fieldtype": "Small Text",
+   "label": "Reason"
+  },
+  {
+   "fieldname": "section_break_14",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "leave_approver",
+   "fieldtype": "Link",
+   "label": "Leave Approver",
+   "options": "User",
+   "reqd": 1
+  },
+  {
+   "fieldname": "leave_approver_name",
+   "fieldtype": "Read Only",
+   "label": "Leave Approver Name"
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "vacation_closing_reference",
+   "fieldtype": "Data",
+   "hidden": 1
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Vacation Leave Application",
+   "print_hide": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "section_break_13",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "applied_rule",
+   "fieldtype": "Link",
+   "label": "Applied Rule",
+   "options": "Vacation Leave Rule",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_15",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "last_vacation",
+   "fieldtype": "Data",
+   "label": "Last Vacation",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_17",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "total_working_days",
+   "fieldtype": "Int",
+   "label": "Total Working Days",
+   "read_only": 1
+  },
+  {
+   "fieldname": "warning_msg",
+   "fieldtype": "Text",
+   "hidden": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "ignore_workflow_delegation",
+   "fieldtype": "Check",
+   "label": "Ignore WorkFlow Delegation"
+  },
+  {
+   "fieldname": "workflow_delegation_id",
+   "fieldtype": "Data",
+   "label": "Workflow Delegation ID",
+   "read_only": 1
+  }
+ ],
+ "is_submittable": 1,
+ "modified": "2020-11-28 16:19:14.727178",
+ "modified_by": "Administrator",
+ "module": "HRM",
+ "name": "Vacation Leave Application",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "title_field": "employee_name",
+ "track_changes": 1
+}

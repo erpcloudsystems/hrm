@@ -1,0 +1,151 @@
+{
+ "autoname": "VR-.#####",
+ "creation": "2019-01-12 14:24:20.356783",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "employee_id",
+  "employee_name",
+  "column_break_3",
+  "posting_date",
+  "company",
+  "vacation_leave_application_details",
+  "vacation_leave_application",
+  "start_date",
+  "end_date",
+  "column_break_10",
+  "leave_approver",
+  "leave_approver_name",
+  "rejoining_details",
+  "extend_vacation",
+  "vacation_rejoining_date",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "employee_id",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Employee Id",
+   "options": "Employee",
+   "reqd": 1
+  },
+  {
+   "fieldname": "employee_name",
+   "fieldtype": "Read Only",
+   "label": "Employee Name"
+  },
+  {
+   "fieldname": "column_break_3",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "Today",
+   "fieldname": "posting_date",
+   "fieldtype": "Date",
+   "label": "Posting Date"
+  },
+  {
+   "fieldname": "company",
+   "fieldtype": "Read Only",
+   "label": "Company"
+  },
+  {
+   "fieldname": "vacation_leave_application_details",
+   "fieldtype": "Section Break",
+   "label": "Vacation Leave Application Details"
+  },
+  {
+   "fieldname": "vacation_leave_application",
+   "fieldtype": "Link",
+   "label": "Vacation Leave Application",
+   "options": "Vacation Leave Application",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "vacation_leave_application.from_date",
+   "fieldname": "start_date",
+   "fieldtype": "Read Only",
+   "label": "Start Date"
+  },
+  {
+   "fetch_from": "vacation_leave_application.to_date",
+   "fieldname": "end_date",
+   "fieldtype": "Read Only",
+   "label": "End Date"
+  },
+  {
+   "fieldname": "column_break_10",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "vacation_leave_application.leave_approver",
+   "fieldname": "leave_approver",
+   "fieldtype": "Read Only",
+   "label": "Leave Approver"
+  },
+  {
+   "fetch_from": "vacation_leave_application.leave_approver_name",
+   "fieldname": "leave_approver_name",
+   "fieldtype": "Read Only",
+   "label": "Leave Approver Name"
+  },
+  {
+   "fieldname": "rejoining_details",
+   "fieldtype": "Section Break",
+   "label": "Rejoining Details"
+  },
+  {
+   "allow_on_submit": 1,
+   "description": "Vacation Rejoining Date cannot be changed after Vacation Leave Application Applied for Future Date",
+   "fieldname": "vacation_rejoining_date",
+   "fieldtype": "Date",
+   "label": "Vacation Rejoining Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Vacation Rejoining",
+   "print_hide": 1,
+   "read_only": 1
+  },
+  {
+   "allow_on_submit": 1,
+   "default": "0",
+   "fieldname": "extend_vacation",
+   "fieldtype": "Check",
+   "label": "Extend vacation"
+  }
+ ],
+ "is_submittable": 1,
+ "modified": "2020-10-21 09:01:09.794185",
+ "modified_by": "Administrator",
+ "module": "HRM",
+ "name": "Vacation Rejoining",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "amend": 1,
+   "cancel": 1,
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

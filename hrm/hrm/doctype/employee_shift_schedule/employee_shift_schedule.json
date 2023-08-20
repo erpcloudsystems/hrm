@@ -1,0 +1,53 @@
+{
+ "actions": [],
+ "creation": "2021-12-04 09:11:03.814485",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "employee",
+  "date",
+  "shift_type",
+  "shift_assignment"
+ ],
+ "fields": [
+  {
+   "fieldname": "employee",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Employee",
+   "options": "Employee"
+  },
+  {
+   "fieldname": "date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Date"
+  },
+  {
+   "fieldname": "shift_type",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Shift Type",
+   "options": "Shift Type"
+  },
+  {
+   "fieldname": "shift_assignment",
+   "fieldtype": "Link",
+   "label": "Shift Assignment",
+   "options": "Shift Assignment"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2021-12-17 14:18:53.775925",
+ "modified_by": "Administrator",
+ "module": "HRM",
+ "name": "Employee Shift Schedule",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

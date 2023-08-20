@@ -1,0 +1,279 @@
+:root {
+	--ep-backgroud: #0073aa;
+	--ep-tab-color: #a5cd3a;
+	--ep-fa-icon-color: #0073aa;
+	--ep-text-color: white;
+	--ep-transparent-shade: rgb(68, 68, 68);
+}
+
+[data-fieldname="dashboard"] {
+	margin: 0px;
+}
+
+.employee-portal-container {
+	background: var(--ep-backgroud);
+	color: var(--ep-text-color);
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+	/* height: 720px; */
+}
+
+.employee-portal-container > div {
+	height: 100%;
+}
+
+.employee-portal-container .profile-holder {
+	height: 100%;
+	padding: 10px;
+}
+
+.employee-portal-container .frame-holder {
+	height: 100%;
+	padding: 0px;
+	margin-top: 10px;
+}
+
+.employee-portal-container .tab ul {
+	display: flex;
+}
+
+.employee-portal-container .tab li {
+	cursor: pointer;
+	padding: 14px 16px;
+	flex-grow: 1;
+	margin: 1px;
+}
+
+.employee-portal-container .tab li {
+	background-color: var(--ep-tab-color);
+}
+
+.employee-portal-container .view-holder {
+	height: fit-content;
+}
+
+.employee-portal-container .view-holder .tabcontent {
+	background-color: var(--ep-tab-color-3);
+}
+
+.employee-portal-container .tab li:hover {
+	opacity: 0.4;
+}
+
+.employee-portal-container .tab li.active {
+	opacity: 0.6;
+}
+
+.employee-portal-container .view-holder .tabcontent {
+	display: flow-root;
+	height: 100%;
+	padding: 6px 18px;
+}
+
+.employee-portal-container .view-holder .tabcontent:not(.active) {
+	display: none;
+}
+
+.employee-portal-container .box {
+	background: white;
+	color: black;
+	border-radius: 5px;
+	padding: 20px 10px;
+	height: 100%;
+}
+
+.employee-portal-container .box .row {
+	margin: 0px;
+}
+
+.employee-portal-container .box:hover {
+	box-shadow: 0px 0px 5px 5px var(--ep-tab-color);
+}
+
+.employee-portal-container .card-holder {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.employee-portal-container .card-holder > .card {
+	display: flex;
+	flex-direction: column;
+	overflow-wrap: break-word;
+	padding: 0px;
+}
+
+
+.employee-portal-container .card .fa {
+	color: var(--ep-fa-icon-color);
+}
+
+.employee-portal-container .card-holder > .card > div {
+	height: 100%;
+	padding: 5px;
+	margin: 2px;
+	background: linear-gradient(45deg, var(--ep-tab-color-3), transparent);
+	border: 2px solid cornflowerblue;
+	border-radius: 5px;
+}
+
+.employee-portal-container .data-holder {
+	text-align: left;
+}
+
+.employee-portal-container .profile-img {
+	height: 200px;
+	width: 100%;
+	background-color: rgb(250, 251, 252);;
+}
+
+.employee-portal-container .profile-img .placeholder-text {
+	width: inherit;
+	display: inline-block;
+	font-size: 72px;
+	padding: 20% 0;
+	color: #d1d8dd;
+	text-align: center;
+}
+
+/* .employee-portal-container .profile-img:has(span.placeholder-text) {
+	border: 5px solid #d1d8dd;
+} */
+
+.employee-portal-container .profile-img .image-holder {
+	height: inherit;
+	width: inherit;
+	object-fit: contain;
+}
+
+.employee-portal-container .user-name {
+	text-align: center;
+	font-size: 18px;
+	font-weight: bold;
+	padding-bottom: 10px;
+}
+
+.employee-portal-container .chart {
+	background: white;
+	height: 300px;
+}
+
+.employee-portal-container #attendance-chart {
+	height: 100%;
+}
+
+.employee-portal-container table {
+	background: var(--ep-backgroud);
+	color: var(--ep-text-color);
+}
+
+.employee-portal-container .leave-table tbody tr {
+	cursor: pointer;
+}
+
+.employee-portal-container .leave-table tbody tr.active td {
+	background-color: cornsilk;
+	color: black;
+}
+
+.employee-portal-container .link-holder {
+	float: right;
+}
+
+.employee-portal-container .employee-details {
+	font-weight: bold;
+	text-align: -webkit-center;
+}
+
+.employee-portal-container .employee-details .link-container {
+	display: grid;
+	/* justify-items: right; */
+}
+.employee-portal-container .employee-details .link-container-list {
+	display: grid;
+	/* justify-items: right; */
+}
+.employee-portal-container .employee-details .link-holder a {
+	color: var(--ep-text-color);
+}
+
+.employee-portal-container .frame-holder {
+	background: white;
+}
+
+.employee-portal-container .label {
+	font-weight: normal;
+}
+
+.employee-portal-container .value {
+	padding-bottom: 5px;
+}
+
+.employee-portal-container .table {
+	margin: 0px 0px;
+}
+
+.employee-portal-container table thead tr th {
+	/* Important */
+	background-color: rgb(231, 231, 231);
+	position: sticky;
+	z-index: 100;
+	top: 0;
+	color: black;
+}
+
+.employee-portal-container .custom_container {
+	height: 270px;
+	overflow-x: hidden;
+	padding-right: 0px;
+}
+
+/* width */
+.employee-portal-container .table-responsive::-webkit-scrollbar {
+	width: 8px;
+}
+
+/* Track */
+.employee-portal-container .table-responsive::-webkit-scrollbar-track {
+	box-shadow: inset 0 0 5px grey; 
+	border-radius: 8px;
+}
+
+/* Handle */
+.employee-portal-container .table-responsive::-webkit-scrollbar-thumb {
+	background: #9697a3; 
+	border-radius: 8px;
+}
+
+/* Handle on hover */
+.employee-portal-container .table-responsive::-webkit-scrollbar-thumb:hover {
+	background: #888899; 
+}
+
+.employee-portal-container .earning-deducation-table tbody {
+	background: white;
+	color: black;
+}
+
+.employee-portal-container .earning-deducation-table .int-val {
+	text-align: right;
+}
+
+.employee-portal-container .box-head .title .period {
+	display: block;
+	font-size: 10px;
+	margin-top: -10px;
+	margin-bottom: 10px;
+}
+
+.employee-portal-container .progress {
+	padding: 0px;
+	height: 20px;
+	margin-top: 30px;
+}
+
+.employee-portal-container .progress-bar {
+	background-color: rgb(255, 201, 14);
+	color: black;
+	
+}

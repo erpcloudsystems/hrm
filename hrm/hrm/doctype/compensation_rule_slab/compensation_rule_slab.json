@@ -1,0 +1,46 @@
+{
+ "creation": "2020-09-05 09:35:17.485292",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "starting_unit",
+  "ending_unit",
+  "percentage_of_compensation"
+ ],
+ "fields": [
+  {
+   "default": "0",
+   "fieldname": "starting_unit",
+   "fieldtype": "Int",
+   "in_list_view": 1,
+   "label": "Starting Unit",
+   "reqd": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "ending_unit",
+   "fieldtype": "Int",
+   "in_list_view": 1,
+   "label": "Ending Unit",
+   "reqd": 1
+  },
+  {
+   "fieldname": "percentage_of_compensation",
+   "fieldtype": "Percent",
+   "in_list_view": 1,
+   "label": "Percentage of Compensation",
+   "reqd": 1
+  }
+ ],
+ "istable": 1,
+ "modified": "2020-12-08 14:02:02.307902",
+ "modified_by": "Administrator",
+ "module": "HRM",
+ "name": "Compensation Rule Slab",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

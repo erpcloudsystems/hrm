@@ -1,0 +1,154 @@
+:root {
+	--hd-tab-color: #a5cd3a;
+	--hd-text-color: white;
+	--hd-table-color: #0073aa;
+}
+
+.hr-dashboard-holder {
+	display: flex;
+	flex-direction: column;
+	background: whitesmoke;
+	width: 100%;
+}
+
+.hr-dashboard-holder .row {
+	margin: 0px;
+}
+
+.layout-main-section-wrapper {
+	margin: 0px;
+	padding: 0px;
+}
+
+.hr-dashboard-holder .tab ul {
+	display: flex;
+}
+
+.hr-dashboard-holder .tab li {
+	cursor: pointer;
+	padding: 14px 16px;
+	flex-grow: 1;
+	margin: 1px;
+	color: var(--hd-text-color);
+}
+
+.hr-dashboard-holder .tab li:hover {
+	opacity: 0.4;
+}
+
+.hr-dashboard-holder .tab li.active {
+	opacity: 0.6;
+}
+
+.hr-dashboard-holder .view-holder {
+	flex-grow: 1;
+}
+
+.hr-dashboard-holder .tab li {
+	background: var(--hd-tab-color);
+}
+
+.hr-dashboard-holder .view-holder .tabcontent {
+	display: flow-root;
+	padding: 6px 18px;
+}
+
+.hr-dashboard-holder .view-holder .tabcontent:not(.active) {
+	display: none;
+}
+
+.hr-dashboard-holder .chart {
+	height: 270px;
+}
+
+.hr-dashboard-holder .equal_chart {
+	height: 100%;
+}
+
+.hr-dashboard-holder .table {
+	color: var(--hd-text-color);
+	background: var(--hd-table-color);
+	margin: 0px 0px;
+}
+
+
+.hr-dashboard-holder table thead tr th {
+	/* Important */
+	background-color: rgb(231, 231, 231);
+	position: sticky;
+	z-index: 100;
+	top: 0;
+	color: black;
+}
+
+.hr-dashboard-holder .custom_container {
+	height: 270px;
+	overflow-x: hidden;
+	padding-right: 0px;
+}
+
+/* width */
+.hr-dashboard-holder .table-responsive::-webkit-scrollbar {
+	width: 8px;
+}
+
+/* Track */
+.hr-dashboard-holder .table-responsive::-webkit-scrollbar-track {
+	box-shadow: inset 0 0 5px grey; 
+	border-radius: 8px;
+}
+
+/* Handle */
+.hr-dashboard-holder .table-responsive::-webkit-scrollbar-thumb {
+	background: #9697a3; 
+	border-radius: 8px;
+}
+
+/* Handle on hover */
+.hr-dashboard-holder .table-responsive::-webkit-scrollbar-thumb:hover {
+	background: #888899; 
+}
+
+
+.hr-dashboard-holder .employee-count {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	height: 270px;
+	text-align: center;
+	font-weight: bold;
+}
+
+/* .hr-dashboard-holder .employee-count .row {
+	font-size: 22px;
+} */
+
+.hr-dashboard-holder .profile-img {
+	height: 100px;
+}
+
+.hr-dashboard-holder .filter-tab .filter:not(.active) {
+	display: none;
+}
+
+.hr-dashboard-holder .card-holder {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.hr-dashboard-holder .card-holder .card {
+	display: flex;
+	flex-direction: column;
+	overflow-wrap: break-word;
+	padding: 0px;
+}
+
+.hr-dashboard-holder .box {
+	display: flex;
+	flex-direction: column;
+	height: 100%;
+	padding: 5px;
+	margin: 2px;
+	border: 2px solid #0073aa;
+	border-radius: 5px;
+}

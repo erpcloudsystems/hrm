@@ -1,0 +1,113 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "field:rule_name",
+ "creation": "2018-06-21 08:07:16.506352",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "rule_name",
+  "eligible_after",
+  "days",
+  "frequency",
+  "redirect_after_year",
+  "redirect_to_rule",
+  "carry_forward_allowed",
+  "maximum_carry_forward_days",
+  "carry_forward_days_need_to_be_availed_in_how_many_days",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "rule_name",
+   "fieldtype": "Data",
+   "label": "Rule Name",
+   "reqd": 1,
+   "unique": 1
+  },
+  {
+   "fieldname": "eligible_after",
+   "fieldtype": "Int",
+   "in_list_view": 1,
+   "label": "Effective After Month",
+   "reqd": 1
+  },
+  {
+   "depends_on": "eval:doc.eligible_after > 0",
+   "fieldname": "days",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Days"
+  },
+  {
+   "fieldname": "redirect_after_year",
+   "fieldtype": "Int",
+   "label": "Redirect After Year"
+  },
+  {
+   "depends_on": "eval:doc.redirect_after_year > 0",
+   "fieldname": "redirect_to_rule",
+   "fieldtype": "Link",
+   "label": "Redirect To Rule",
+   "options": "Vacation Leave Rule"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Vacation Leave Rule",
+   "print_hide": 1,
+   "read_only": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "frequency",
+   "fieldtype": "Int",
+   "label": "Frequency"
+  },
+  {
+   "default": "0",
+   "fieldname": "carry_forward_allowed",
+   "fieldtype": "Check",
+   "label": "Carry forward allowed"
+  },
+  {
+   "depends_on": "carry_forward_allowed",
+   "fieldname": "maximum_carry_forward_days",
+   "fieldtype": "Int",
+   "label": "Maximum Carry forward days"
+  },
+  {
+   "depends_on": "carry_forward_allowed",
+   "fieldname": "carry_forward_days_need_to_be_availed_in_how_many_days",
+   "fieldtype": "Int",
+   "label": "Carry forward days need to be availed in how many days"
+  }
+ ],
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2022-04-28 07:51:34.343317",
+ "modified_by": "Administrator",
+ "module": "HRM",
+ "name": "Vacation Leave Rule",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

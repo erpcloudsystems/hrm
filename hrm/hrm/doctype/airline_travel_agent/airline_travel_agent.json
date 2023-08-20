@@ -1,0 +1,125 @@
+{
+ "autoname": "field:code",
+ "creation": "2018-06-02 08:20:18.884001",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "code",
+  "name1",
+  "contact_details",
+  "address_line1",
+  "address_line_2",
+  "column_break_6",
+  "city",
+  "state",
+  "country",
+  "contact_information",
+  "phone_no",
+  "mobile_no",
+  "email_id",
+  "remark"
+ ],
+ "fields": [
+  {
+   "fieldname": "code",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Code",
+   "reqd": 1,
+   "unique": 1
+  },
+  {
+   "fieldname": "name1",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Name",
+   "reqd": 1
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "contact_details",
+   "fieldtype": "Section Break",
+   "label": "Address"
+  },
+  {
+   "fieldname": "address_line1",
+   "fieldtype": "Data",
+   "label": "Address Line1"
+  },
+  {
+   "fieldname": "address_line_2",
+   "fieldtype": "Data",
+   "label": "Address Line 2"
+  },
+  {
+   "fieldname": "column_break_6",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "city",
+   "fieldtype": "Data",
+   "label": "City/Town"
+  },
+  {
+   "fieldname": "state",
+   "fieldtype": "Data",
+   "label": "State "
+  },
+  {
+   "fieldname": "country",
+   "fieldtype": "Data",
+   "label": "Country"
+  },
+  {
+   "fieldname": "contact_information",
+   "fieldtype": "Section Break",
+   "label": "Contact Information"
+  },
+  {
+   "fieldname": "phone_no",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Phone No",
+   "reqd": 1
+  },
+  {
+   "fieldname": "mobile_no",
+   "fieldtype": "Data",
+   "label": "Mobile No"
+  },
+  {
+   "fieldname": "email_id",
+   "fieldtype": "Data",
+   "label": "Email Address"
+  },
+  {
+   "fieldname": "remark",
+   "fieldtype": "Long Text",
+   "label": "Remark"
+  }
+ ],
+ "modified": "2020-09-28 15:30:35.675124",
+ "modified_by": "Administrator",
+ "module": "HRM",
+ "name": "Airline Travel Agent",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "title_field": "name1",
+ "track_changes": 1
+}

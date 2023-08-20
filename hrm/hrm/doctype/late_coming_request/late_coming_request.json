@@ -1,0 +1,172 @@
+{
+ "autoname": "LCR-.#####",
+ "creation": "2020-10-03 13:49:15.256058",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "employee",
+  "employee_name",
+  "attendance",
+  "column_break_4",
+  "posting_date",
+  "attendance_date",
+  "status",
+  "section_break_8",
+  "number_of_minutes_late",
+  "leave_approver",
+  "leave_approver_name",
+  "actual_number_of_minutes_late",
+  "approved_number_of_minutes_late",
+  "column_break_10",
+  "reason_for_late_coming",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "employee",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Employee",
+   "options": "Employee",
+   "reqd": 1
+  },
+  {
+   "depends_on": "employee",
+   "fetch_from": "employee.employee_name",
+   "fieldname": "employee_name",
+   "fieldtype": "Data",
+   "label": "Employee Name",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_4",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "Today",
+   "fieldname": "posting_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Posting Date",
+   "read_only": 1,
+   "reqd": 1
+  },
+  {
+   "fieldname": "attendance_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Attendance Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Status",
+   "options": "Open\nApproved\nRejected\nCancelled",
+   "reqd": 1
+  },
+  {
+   "fieldname": "section_break_8",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "number_of_minutes_late",
+   "fieldtype": "Int",
+   "label": "Number of Minutes Late",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_10",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "reason_for_late_coming",
+   "fieldtype": "Small Text",
+   "label": "Reason for Late Coming"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Late Coming Request",
+   "print_hide": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "leave_approver",
+   "fieldtype": "Link",
+   "label": "Leave Approver",
+   "options": "User",
+   "read_only": 1,
+   "reqd": 1
+  },
+  {
+   "depends_on": "leave_approver",
+   "fieldname": "leave_approver_name",
+   "fieldtype": "Data",
+   "label": "Leave Approver Name",
+   "read_only": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "approved_number_of_minutes_late",
+   "fieldtype": "Int",
+   "label": "Approved Number of Minutes Late",
+   "permlevel": 1,
+   "reqd": 1
+  },
+  {
+   "fieldname": "attendance",
+   "fieldtype": "Link",
+   "label": "Attendance",
+   "options": "Attendance",
+   "read_only": 1
+  },
+  {
+   "depends_on": "actual_number_of_minutes_late",
+   "fieldname": "actual_number_of_minutes_late",
+   "fieldtype": "Int",
+   "label": "Actual Number of Minutes Late",
+   "read_only": 1
+  }
+ ],
+ "is_submittable": 1,
+ "modified": "2021-04-15 13:14:52.448078",
+ "modified_by": "Administrator",
+ "module": "HRM",
+ "name": "Late Coming Request",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "amend": 1,
+   "cancel": 1,
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "permlevel": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

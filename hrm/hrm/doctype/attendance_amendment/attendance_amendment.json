@@ -1,0 +1,190 @@
+{
+ "autoname": "AA-.#####",
+ "creation": "2020-09-25 15:37:44.634595",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "employee",
+  "employee_name",
+  "attendance",
+  "column_break_3",
+  "posting_date",
+  "attendance_date",
+  "section_break_5",
+  "status",
+  "column_break_9",
+  "shift",
+  "column_break_11",
+  "in_time",
+  "column_break_8",
+  "out_time",
+  "amended_section",
+  "amended_status",
+  "column_break_14",
+  "amended_shift",
+  "column_break_19",
+  "amended_in_time",
+  "column_break_12",
+  "amended_out_time",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "employee",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Employee",
+   "options": "Employee",
+   "reqd": 1
+  },
+  {
+   "default": "Today",
+   "fieldname": "posting_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Posting Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "attendance_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Attendance Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Attendance Amendment",
+   "print_hide": 1,
+   "read_only": 1
+  },
+  {
+   "depends_on": "employee",
+   "fetch_from": "employee.employee_name",
+   "fieldname": "employee_name",
+   "fieldtype": "Data",
+   "label": "Employee Name",
+   "read_only": 1
+  },
+  {
+   "depends_on": "attendance",
+   "fieldname": "section_break_5",
+   "fieldtype": "Section Break",
+   "label": "Actual"
+  },
+  {
+   "fieldname": "column_break_3",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_8",
+   "fieldtype": "Column Break"
+  },
+  {
+   "depends_on": "attendance",
+   "fieldname": "amended_section",
+   "fieldtype": "Section Break",
+   "label": "Amended"
+  },
+  {
+   "fieldname": "amended_in_time",
+   "fieldtype": "Time",
+   "label": "Amended IN Time"
+  },
+  {
+   "fieldname": "column_break_12",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "amended_out_time",
+   "fieldtype": "Time",
+   "label": "Amended OUT Time"
+  },
+  {
+   "depends_on": "employee && attendance_date",
+   "fieldname": "attendance",
+   "fieldtype": "Data",
+   "label": "Attendance",
+   "read_only": 1
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Read Only",
+   "label": "Status"
+  },
+  {
+   "fieldname": "in_time",
+   "fieldtype": "Time",
+   "label": "IN Time",
+   "read_only": 1
+  },
+  {
+   "fieldname": "out_time",
+   "fieldtype": "Time",
+   "label": "Out Time",
+   "read_only": 1
+  },
+  {
+   "fieldname": "amended_status",
+   "fieldtype": "Select",
+   "label": "Amended Status",
+   "options": "Present\nAbsent"
+  },
+  {
+   "fieldname": "column_break_14",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_9",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "shift",
+   "fieldtype": "Link",
+   "label": "Shift",
+   "options": "Shift Type",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_11",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "amended_shift",
+   "fieldtype": "Link",
+   "label": "Amended Shift",
+   "options": "Shift Type"
+  },
+  {
+   "fieldname": "column_break_19",
+   "fieldtype": "Column Break"
+  }
+ ],
+ "is_submittable": 1,
+ "modified": "2020-09-26 09:49:48.127172",
+ "modified_by": "Administrator",
+ "module": "HRM",
+ "name": "Attendance Amendment",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

@@ -1,0 +1,144 @@
+{
+ "autoname": "OTP-.#####",
+ "creation": "2020-09-23 11:41:02.738556",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "employee",
+  "employee_name",
+  "from_date",
+  "to_date",
+  "leave_approver",
+  "leave_approver_name",
+  "planned_number_of_minutes_ot_per_day",
+  "approved_maximum_ot_allowed_per_day",
+  "column_break_2",
+  "status",
+  "maximum_ot_allowed_per_day_as_per_ot_rule",
+  "violation_action",
+  "reason",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "employee",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Employee",
+   "options": "Employee",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_2",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "OT Planner",
+   "print_hide": 1,
+   "read_only": 1
+  },
+  {
+   "depends_on": "employee",
+   "fetch_from": "employee.employee_name",
+   "fieldname": "employee_name",
+   "fieldtype": "Data",
+   "label": "Employee Name",
+   "read_only": 1
+  },
+  {
+   "fieldname": "reason",
+   "fieldtype": "Small Text",
+   "label": "Reason"
+  },
+  {
+   "fieldname": "leave_approver",
+   "fieldtype": "Link",
+   "label": "Leave Approver",
+   "options": "User",
+   "reqd": 1
+  },
+  {
+   "depends_on": "leave_approver",
+   "fieldname": "leave_approver_name",
+   "fieldtype": "Data",
+   "label": "Leave Approver Name",
+   "read_only": 1
+  },
+  {
+   "default": "Open",
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "in_standard_filter": 1,
+   "label": "Status",
+   "options": "Open\nApproved\nRejected\nCancelled"
+  },
+  {
+   "fieldname": "from_date",
+   "fieldtype": "Date",
+   "label": "From Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "maximum_ot_allowed_per_day_as_per_ot_rule",
+   "fieldtype": "Int",
+   "label": "Maximum OT allowed per day as per OT rule",
+   "read_only": 1
+  },
+  {
+   "fieldname": "planned_number_of_minutes_ot_per_day",
+   "fieldtype": "Int",
+   "label": "Planned number of minutes OT per day",
+   "reqd": 1
+  },
+  {
+   "fieldname": "approved_maximum_ot_allowed_per_day",
+   "fieldtype": "Int",
+   "label": "Approved Maximum OT allowed per day",
+   "permlevel": 1,
+   "reqd": 1
+  },
+  {
+   "fieldname": "violation_action",
+   "fieldtype": "Select",
+   "label": "Violation Action",
+   "options": "Violation approval required\nConsider Approved OT allowed"
+  },
+  {
+   "fieldname": "to_date",
+   "fieldtype": "Date",
+   "label": "To Date",
+   "reqd": 1
+  }
+ ],
+ "is_submittable": 1,
+ "modified": "2021-02-22 10:41:32.286841",
+ "modified_by": "Administrator",
+ "module": "HRM",
+ "name": "OT Planner",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "amend": 1,
+   "cancel": 1,
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

@@ -1,0 +1,436 @@
+{
+ "autoname": "EDC.#####",
+ "creation": "2018-07-12 13:15:38.175901",
+ "doctype": "DocType",
+ "document_type": "Document",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "employee",
+  "column_break_2",
+  "full_name",
+  "enroll_number",
+  "section_break_5",
+  "date_of_birth",
+  "column_break_8",
+  "modify_birth_date",
+  "modify_subway_university_number",
+  "employee_details",
+  "cell_number",
+  "marital_status",
+  "permanent_address",
+  "current_address",
+  "emergency_contact",
+  "emergency_phone",
+  "preferred_contact_email",
+  "personal_email",
+  "company_email",
+  "column_break_10",
+  "modify_cell_number",
+  "modify_marital_status",
+  "modify_permanent_address",
+  "modify_current_address",
+  "modify_emergency_contact",
+  "modify_emergency_phone",
+  "modify_preferred_contact_email",
+  "modify_personal_email",
+  "modify_company_email",
+  "family_details",
+  "family",
+  "employee_identification",
+  "driving_license_no",
+  "baladiya_card_no",
+  "training_expiry_date",
+  "national_id_no",
+  "iqama_no",
+  "iqama_issue_date",
+  "iqama_expiry_hijri",
+  "passport_number",
+  "date_of_issue",
+  "valid_upto_english",
+  "driving_license_issue_date",
+  "driving_license_expiry_date",
+  "exam_date",
+  "column_break_40",
+  "modify_driving_license_no",
+  "modify_baladiya_card_no",
+  "modify_training_expiry_date",
+  "modify_national_id_no",
+  "modify_iqama_no",
+  "modify_iqama_issue_date",
+  "modify_iqama_expiry_hijri",
+  "modify_passport_number",
+  "modify_date_of_issue",
+  "modify_valid_upto_english",
+  "modify_driving_license_issue_date",
+  "modify_driving_license_expiry_date",
+  "modify_exam_date",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "employee",
+   "fieldtype": "Link",
+   "in_global_search": 1,
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Employee",
+   "options": "Employee",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_2",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "full_name",
+   "fieldtype": "Read Only",
+   "in_list_view": 1,
+   "label": "Full Name",
+   "options": "employee.employee_name"
+  },
+  {
+   "fieldname": "enroll_number",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Enroll Number ",
+   "options": "employee.enroll_number",
+   "read_only": 1
+  },
+  {
+   "fieldname": "section_break_5",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "date_of_birth",
+   "fieldtype": "Read Only",
+   "label": "Date of Birth ",
+   "options": "employee.date_of_birth"
+  },
+  {
+   "fieldname": "column_break_8",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "modify_birth_date",
+   "fieldtype": "Date",
+   "label": "Modify Birth Date"
+  },
+  {
+   "fieldname": "modify_subway_university_number",
+   "fieldtype": "Data",
+   "label": "Modify Subway University Number"
+  },
+  {
+   "fieldname": "employee_details",
+   "fieldtype": "Section Break",
+   "label": "Contact Details"
+  },
+  {
+   "fieldname": "cell_number",
+   "fieldtype": "Read Only",
+   "label": "Cell Number",
+   "options": "employee.cell_number"
+  },
+  {
+   "fieldname": "marital_status",
+   "fieldtype": "Read Only",
+   "label": "Marital Status",
+   "options": "employee.marital_status"
+  },
+  {
+   "fieldname": "permanent_address",
+   "fieldtype": "Read Only",
+   "label": "Permanent Address",
+   "options": "employee.permanent_address"
+  },
+  {
+   "fieldname": "current_address",
+   "fieldtype": "Read Only",
+   "label": "Current Address",
+   "options": "employee.current_address"
+  },
+  {
+   "fieldname": "emergency_contact",
+   "fieldtype": "Read Only",
+   "label": "Emergency Contact",
+   "options": "employee.person_to_be_contacted"
+  },
+  {
+   "fieldname": "emergency_phone",
+   "fieldtype": "Read Only",
+   "label": "Emergency Phone",
+   "options": "employee.emergency_phone_number"
+  },
+  {
+   "fieldname": "preferred_contact_email",
+   "fieldtype": "Read Only",
+   "label": "Preferred Contact Email",
+   "options": "employee.prefered_contact_email"
+  },
+  {
+   "fieldname": "personal_email",
+   "fieldtype": "Read Only",
+   "label": "Personal Email"
+  },
+  {
+   "fieldname": "company_email",
+   "fieldtype": "Read Only",
+   "label": "Company Email"
+  },
+  {
+   "fieldname": "column_break_10",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "modify_cell_number",
+   "fieldtype": "Data",
+   "label": "Modify Cell Number"
+  },
+  {
+   "fieldname": "modify_marital_status",
+   "fieldtype": "Select",
+   "label": "Modify Marital Status",
+   "options": "\nSingle\nMarried\nDivorced\nWidowed"
+  },
+  {
+   "fieldname": "modify_permanent_address",
+   "fieldtype": "Data",
+   "label": "Modify Permanent Address"
+  },
+  {
+   "fieldname": "modify_current_address",
+   "fieldtype": "Data",
+   "label": "Modify Current Address"
+  },
+  {
+   "fieldname": "modify_emergency_contact",
+   "fieldtype": "Data",
+   "label": "Modify Emergency Contact"
+  },
+  {
+   "fieldname": "modify_emergency_phone",
+   "fieldtype": "Data",
+   "label": "Modify Emergency Phone"
+  },
+  {
+   "fieldname": "modify_preferred_contact_email",
+   "fieldtype": "Select",
+   "label": "Modify Preferred Contact Email",
+   "options": "\nPersonal Email\nUser ID"
+  },
+  {
+   "depends_on": "eval:doc.modify_preferred_contact_email == 'Personal Email'\n",
+   "fieldname": "modify_personal_email",
+   "fieldtype": "Data",
+   "label": "Modify Personal Email",
+   "options": "Email"
+  },
+  {
+   "depends_on": "eval:doc.modify_preferred_contact_email == 'User ID'",
+   "fieldname": "modify_company_email",
+   "fieldtype": "Data",
+   "label": "Modify Company Email",
+   "options": "Email"
+  },
+  {
+   "fieldname": "family_details",
+   "fieldtype": "Section Break",
+   "label": "Family Details"
+  },
+  {
+   "fieldname": "family",
+   "fieldtype": "Table",
+   "label": "Family ",
+   "options": "Family Details Data Change"
+  },
+  {
+   "fieldname": "employee_identification",
+   "fieldtype": "Section Break",
+   "label": "Employee Identification"
+  },
+  {
+   "fieldname": "driving_license_no",
+   "fieldtype": "Read Only",
+   "label": "Driving License No",
+   "options": "employee.driving_license_no"
+  },
+  {
+   "fieldname": "baladiya_card_no",
+   "fieldtype": "Read Only",
+   "label": "Baladiya Card No",
+   "options": "employee.baladiya_card_no"
+  },
+  {
+   "fieldname": "training_expiry_date",
+   "fieldtype": "Read Only",
+   "label": "Training Expiry Date",
+   "options": "employee.training_expiry_date"
+  },
+  {
+   "fieldname": "national_id_no",
+   "fieldtype": "Read Only",
+   "label": "National Id No",
+   "options": "employee.national_id_no"
+  },
+  {
+   "fieldname": "iqama_no",
+   "fieldtype": "Read Only",
+   "label": "Iqama No",
+   "options": "employee.iqama_no"
+  },
+  {
+   "fieldname": "iqama_issue_date",
+   "fieldtype": "Read Only",
+   "label": "Iqama Issue Date",
+   "options": "employee.iqama_issue_date"
+  },
+  {
+   "fieldname": "iqama_expiry_hijri",
+   "fieldtype": "Read Only",
+   "label": "Iqama Expiry Hijri",
+   "options": "employee.iqama_expiry_hijri"
+  },
+  {
+   "fieldname": "passport_number",
+   "fieldtype": "Read Only",
+   "label": "Passport Number",
+   "options": "employee.passport_number"
+  },
+  {
+   "fieldname": "date_of_issue",
+   "fieldtype": "Read Only",
+   "label": "Date of Issue",
+   "options": "employee.date_of_issue"
+  },
+  {
+   "fieldname": "valid_upto_english",
+   "fieldtype": "Read Only",
+   "label": "Valid Upto English",
+   "options": "employee.valid_upto"
+  },
+  {
+   "fieldname": "driving_license_issue_date",
+   "fieldtype": "Read Only",
+   "label": "Driving License Issue Date",
+   "options": "employee.driving_license_issue_date"
+  },
+  {
+   "fieldname": "driving_license_expiry_date",
+   "fieldtype": "Read Only",
+   "label": "Driving License Expiry Date",
+   "options": "employee.driving_license_expiry_date"
+  },
+  {
+   "fieldname": "exam_date",
+   "fieldtype": "Read Only",
+   "label": "Exam Date",
+   "options": "employee.exam_date"
+  },
+  {
+   "fieldname": "column_break_40",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "modify_driving_license_no",
+   "fieldtype": "Data",
+   "label": "Modify Driving License No"
+  },
+  {
+   "fieldname": "modify_baladiya_card_no",
+   "fieldtype": "Data",
+   "label": "Modify Baladiya Card No"
+  },
+  {
+   "fieldname": "modify_training_expiry_date",
+   "fieldtype": "Date",
+   "label": "Modify Training Expiry Date"
+  },
+  {
+   "fieldname": "modify_national_id_no",
+   "fieldtype": "Read Only",
+   "label": "Modify National Id No"
+  },
+  {
+   "fieldname": "modify_iqama_no",
+   "fieldtype": "Read Only",
+   "label": "Modify Iqama No"
+  },
+  {
+   "fieldname": "modify_iqama_issue_date",
+   "fieldtype": "Read Only",
+   "label": "Modify Iqama Issue Date"
+  },
+  {
+   "fieldname": "modify_iqama_expiry_hijri",
+   "fieldtype": "Read Only",
+   "label": "Modify Iqama Expiry Hijri"
+  },
+  {
+   "fieldname": "modify_passport_number",
+   "fieldtype": "Read Only",
+   "label": "Modify Passport Number"
+  },
+  {
+   "fieldname": "modify_date_of_issue",
+   "fieldtype": "Read Only",
+   "label": "Modify Date of Issue"
+  },
+  {
+   "fieldname": "modify_valid_upto_english",
+   "fieldtype": "Read Only",
+   "label": "Modify Valid Upto English"
+  },
+  {
+   "fieldname": "modify_driving_license_issue_date",
+   "fieldtype": "Read Only",
+   "label": "Modify Driving License Issue Date"
+  },
+  {
+   "fieldname": "modify_driving_license_expiry_date",
+   "fieldtype": "Read Only",
+   "label": "Modify Driving License Expiry Date"
+  },
+  {
+   "fieldname": "modify_exam_date",
+   "fieldtype": "Read Only",
+   "label": "Modify Exam Date"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Employee Data Changes",
+   "print_hide": 1,
+   "read_only": 1
+  }
+ ],
+ "is_submittable": 1,
+ "modified": "2019-12-25 16:14:37.610923",
+ "modified_by": "Administrator",
+ "module": "HRM",
+ "name": "Employee Data Changes",
+ "name_case": "Title Case",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "search_fields": "employee",
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "title_field": "employee",
+ "track_changes": 1
+}

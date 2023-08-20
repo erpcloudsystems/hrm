@@ -1,0 +1,129 @@
+{
+ "creation": "2018-04-10 09:06:10.758396",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "member_name",
+  "relation",
+  "gender",
+  "date_of_birth",
+  "passport_number",
+  "valid_up_to",
+  "iqama_no",
+  "iqama_issue_date",
+  "column_break_9",
+  "iqama_expiry_date",
+  "insurance_membership_no",
+  "policy_no",
+  "insurance_class",
+  "insurance_issue_date",
+  "insurance_expiry_date",
+  "insurance_approval_limit",
+  "ref"
+ ],
+ "fields": [
+  {
+   "fieldname": "member_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Member Name"
+  },
+  {
+   "fieldname": "relation",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Relation"
+  },
+  {
+   "fieldname": "gender",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Gender",
+   "options": "Gender"
+  },
+  {
+   "fieldname": "date_of_birth",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Date Of Birth"
+  },
+  {
+   "fieldname": "passport_number",
+   "fieldtype": "Data",
+   "label": "Passport Number"
+  },
+  {
+   "fieldname": "valid_up_to",
+   "fieldtype": "Date",
+   "label": "Valid Up To"
+  },
+  {
+   "fieldname": "iqama_no",
+   "fieldtype": "Data",
+   "label": "Iqama NO"
+  },
+  {
+   "fieldname": "iqama_issue_date",
+   "fieldtype": "Date",
+   "label": "Iqama Issue Date"
+  },
+  {
+   "fieldname": "column_break_9",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "iqama_expiry_date",
+   "fieldtype": "Date",
+   "label": "Iqama Expiry Date"
+  },
+  {
+   "fieldname": "insurance_membership_no",
+   "fieldtype": "Data",
+   "label": "Insurance Membership No"
+  },
+  {
+   "fieldname": "policy_no",
+   "fieldtype": "Data",
+   "label": "Policy No"
+  },
+  {
+   "fieldname": "insurance_class",
+   "fieldtype": "Select",
+   "label": "Insurance Class",
+   "options": "\nA\nB\nC\nVIP"
+  },
+  {
+   "fieldname": "insurance_issue_date",
+   "fieldtype": "Date",
+   "label": "Insurance Issue Date"
+  },
+  {
+   "fieldname": "insurance_expiry_date",
+   "fieldtype": "Date",
+   "label": "Insurance Expiry Date"
+  },
+  {
+   "fieldname": "insurance_approval_limit",
+   "fieldtype": "Data",
+   "label": "Insurance Approval Limit"
+  },
+  {
+   "fieldname": "ref",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "Ref"
+  }
+ ],
+ "istable": 1,
+ "modified": "2019-12-26 09:07:43.503429",
+ "modified_by": "Administrator",
+ "module": "HRM",
+ "name": "Family Details Data Change",
+ "owner": "demo@digitalprizm.net",
+ "permissions": [],
+ "quick_entry": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

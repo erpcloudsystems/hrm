@@ -1,0 +1,49 @@
+
+{% if (salary_component && (salary_component.length >= 0)) { %}
+	<div class="form-group">
+		<button class="btn btn-default btn-primary btn-sm primary-action" id="Update_data" type="button">
+			<span>Process</span>
+		</button>
+	</div>
+
+	<div class="row">
+		<div class="panel table-responsive">
+			<table class="table table-hover table-fixed table-bordered" id="emp_table">
+				<thead>
+				<th width = 100px>Employee ID</th>
+				<th width = 100px>Enroll Number</th>
+				<th width = 300px>Employee Name</th>
+
+				{% for (var i=0,l=salary_component.length; i<l; i++) { %}
+					<th class="no-sort" style="width : 200px" id="salary_component_{{i}}"> {{ salary_component[i]["name"] }} </th>
+				{% } %}
+
+				</thead>
+				<tbody id="emp_table_body">
+					{% if (emp_detail && (emp_detail.length >= 0)) { %}
+						{% for (var i=0,l=emp_detail.length; i<l; i++) { %}
+							<tr id="{{ emp_detail[i]["name"] }}">
+								<td>
+									<div id="emp_name_{{i}}">{{ emp_detail[i]["name"] }}</div>
+								</td>
+								<td>
+									<div>{{ emp_detail[i]["enroll_number"] }}</div>
+								</td>
+								<td>
+									<div>{{emp_detail[i]["employee_name"]}}</div>
+								</td>
+								{% for (var j=0,k=salary_component.length; j<k; j++) { %}
+									<td class="validate_number">
+										<input type="number" id="comp_val_{{i}}_{{j}}" placeholder=0 min=0>
+									</td>
+								{% } %}
+							</tr>
+						{% } %}
+					{% } %}
+				</tbody>
+			</table>
+		</div>
+	</div>
+{% } else { %}
+	<div class="text-muted text-center">There is no salary component checked</div>
+{% } %}

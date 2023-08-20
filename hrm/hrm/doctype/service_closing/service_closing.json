@@ -1,0 +1,416 @@
+{
+ "allow_copy": 1,
+ "autoname": "SC-.#####",
+ "creation": "2019-02-06 13:03:15.792589",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "company",
+  "employee",
+  "employee_name",
+  "column_break_1",
+  "posting_date",
+  "section_break_6",
+  "joining_date",
+  "iquama_no",
+  "designation",
+  "column_break_10",
+  "basic_salary",
+  "gross_pay_amount",
+  "termination_details",
+  "termination_date",
+  "total_service_period_in_days",
+  "column_break_12",
+  "termination_type",
+  "total_absent_days",
+  "column_break_14",
+  "total_service_period",
+  "eligible_days_edays",
+  "section_break_12",
+  "leave_encashment_balance",
+  "section_break_15",
+  "present_days",
+  "ot_hours",
+  "loan_amount",
+  "total_salary_amt",
+  "column_break_24",
+  "salary_amount",
+  "ot_amount",
+  "section_break_22",
+  "service_award",
+  "section_break_32",
+  "service_closing_adjustment",
+  "section_break_28",
+  "total_leave_encashment_amount",
+  "loan_advance",
+  "total_additional_amount",
+  "total_amount",
+  "column_break_37",
+  "sa_total_amount",
+  "total_salary_amount",
+  "total_deduction_amount",
+  "net_payable",
+  "section_break_43",
+  "payment_account",
+  "journal_entry",
+  "column_break_46",
+  "expense_account",
+  "salary_slip",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "company",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Company",
+   "options": "Company",
+   "reqd": 1
+  },
+  {
+   "fieldname": "employee",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Employee",
+   "options": "Employee",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "employee.date_of_joining",
+   "fieldname": "joining_date",
+   "fieldtype": "Data",
+   "label": "Joining Date",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "employee.iqama_no",
+   "fieldname": "iquama_no",
+   "fieldtype": "Data",
+   "label": "Iquama No",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "employee.designation",
+   "fieldname": "designation",
+   "fieldtype": "Data",
+   "label": "Designation",
+   "read_only": 1
+  },
+  {
+   "default": "Today",
+   "fieldname": "posting_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Posting Date",
+   "reqd": 1
+  },
+  {
+   "depends_on": "employee",
+   "fetch_from": "employee.employee_name",
+   "fieldname": "employee_name",
+   "fieldtype": "Data",
+   "label": "Employee Name",
+   "read_only": 1
+  },
+  {
+   "fieldname": "basic_salary",
+   "fieldtype": "Currency",
+   "label": "Basic Salary",
+   "options": "Company:company:default_currency",
+   "read_only": 1
+  },
+  {
+   "fieldname": "gross_pay_amount",
+   "fieldtype": "Currency",
+   "label": "Gross Pay Amount",
+   "options": "Company:company:default_currency",
+   "read_only": 1
+  },
+  {
+   "fieldname": "termination_details",
+   "fieldtype": "Section Break",
+   "label": "EOS Details"
+  },
+  {
+   "default": "Today",
+   "fieldname": "termination_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "EOS Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_12",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "termination_type",
+   "fieldtype": "Link",
+   "label": "EOS Type",
+   "options": "EOS Master",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_14",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "total_service_period",
+   "fieldtype": "Read Only",
+   "label": "Total Service Period"
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "section_break_12",
+   "fieldtype": "Section Break",
+   "label": "Leave Encashment"
+  },
+  {
+   "fieldname": "leave_encashment_balance",
+   "fieldtype": "Table",
+   "label": "Leave Encashment Balance",
+   "options": "Service Closing Leave",
+   "read_only": 1
+  },
+  {
+   "fieldname": "total_leave_encashment_amount",
+   "fieldtype": "Currency",
+   "label": "Total Leave Encashment Amount",
+   "options": "Company:company:default_currency",
+   "read_only": 1
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "section_break_15",
+   "fieldtype": "Section Break",
+   "label": "Salary Details"
+  },
+  {
+   "fieldname": "present_days",
+   "fieldtype": "Read Only",
+   "hidden": 1,
+   "label": "Attendance Days"
+  },
+  {
+   "fieldname": "ot_hours",
+   "fieldtype": "Read Only",
+   "hidden": 1,
+   "label": "OT Hours"
+  },
+  {
+   "fieldname": "loan_amount",
+   "fieldtype": "Read Only",
+   "hidden": 1,
+   "label": "Loan Amount From Salary Slip"
+  },
+  {
+   "fieldname": "column_break_24",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "salary_amount",
+   "fieldtype": "Read Only",
+   "hidden": 1,
+   "label": "Salary Amount"
+  },
+  {
+   "fieldname": "ot_amount",
+   "fieldtype": "Read Only",
+   "hidden": 1,
+   "label": "OT Amount"
+  },
+  {
+   "fieldname": "total_salary_amt",
+   "fieldtype": "Currency",
+   "label": "Salary Slip Amount",
+   "options": "Company:company:default_currency",
+   "read_only": 1
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "section_break_22",
+   "fieldtype": "Section Break",
+   "label": "Service Award"
+  },
+  {
+   "fieldname": "sa_total_amount",
+   "fieldtype": "Currency",
+   "label": "Service Award Total Amount",
+   "options": "Company:company:default_currency",
+   "read_only": 1
+  },
+  {
+   "fieldname": "section_break_28",
+   "fieldtype": "Section Break",
+   "label": "Final Settlement"
+  },
+  {
+   "fieldname": "loan_advance",
+   "fieldtype": "Currency",
+   "label": "Loan/Advance Balance",
+   "options": "Company:company:default_currency",
+   "read_only": 1
+  },
+  {
+   "fieldname": "total_amount",
+   "fieldtype": "Currency",
+   "label": "Total Amount",
+   "options": "Company:company:default_currency",
+   "read_only": 1
+  },
+  {
+   "fieldname": "payment_account",
+   "fieldtype": "Link",
+   "label": "Payment Account",
+   "options": "Account",
+   "permlevel": 1
+  },
+  {
+   "fieldname": "column_break_37",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "total_salary_amount",
+   "fieldtype": "Currency",
+   "label": "Total Salary Amount",
+   "options": "Company:company:default_currency",
+   "read_only": 1
+  },
+  {
+   "fieldname": "net_payable",
+   "fieldtype": "Currency",
+   "label": "Net Payable",
+   "options": "Company:company:default_currency",
+   "read_only": 1
+  },
+  {
+   "fieldname": "expense_account",
+   "fieldtype": "Link",
+   "label": "Expense Account",
+   "options": "Account",
+   "permlevel": 1
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Service Closing",
+   "print_hide": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "depends_on": "employee",
+   "fieldname": "section_break_6",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_10",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "service_award",
+   "fieldtype": "Table",
+   "label": "Service Award",
+   "options": "Service Award Table",
+   "read_only": 1
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "section_break_32",
+   "fieldtype": "Section Break",
+   "label": "Service Closing Adjustment"
+  },
+  {
+   "fieldname": "service_closing_adjustment",
+   "fieldtype": "Table",
+   "label": "Service Closing Adjustment",
+   "options": "Service Closing Adjustment"
+  },
+  {
+   "fieldname": "section_break_43",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "journal_entry",
+   "fieldtype": "Link",
+   "label": "Journal Entry",
+   "options": "Journal Entry",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_46",
+   "fieldtype": "Column Break"
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "salary_slip",
+   "fieldtype": "Link",
+   "label": "Salary Slip",
+   "options": "Salary Slip",
+   "read_only": 1
+  },
+  {
+   "fieldname": "total_service_period_in_days",
+   "fieldtype": "Int",
+   "label": "Total Service Period in days",
+   "read_only": 1
+  },
+  {
+   "fieldname": "total_absent_days",
+   "fieldtype": "Int",
+   "label": "Total Absent days",
+   "read_only": 1
+  },
+  {
+   "fieldname": "eligible_days_edays",
+   "fieldtype": "Int",
+   "label": "Eligible Days (EDAYS)",
+   "read_only": 1
+  },
+  {
+   "fieldname": "total_additional_amount",
+   "fieldtype": "Currency",
+   "label": "Total Additional Amount",
+   "options": "Company:company:default_currency",
+   "read_only": 1
+  },
+  {
+   "fieldname": "total_deduction_amount",
+   "fieldtype": "Currency",
+   "label": "Total Deduction Amount",
+   "options": "Company:company:default_currency",
+   "read_only": 1
+  }
+ ],
+ "is_submittable": 1,
+ "modified": "2021-08-09 12:20:49.248726",
+ "modified_by": "anil@digitalconnexion.net",
+ "module": "HRM",
+ "name": "Service Closing",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "cancel": 1,
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

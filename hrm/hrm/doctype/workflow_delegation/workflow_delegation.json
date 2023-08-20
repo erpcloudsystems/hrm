@@ -1,0 +1,137 @@
+{
+ "autoname": "WFD-.#####",
+ "creation": "2021-06-22 10:21:05.630208",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "employee",
+  "employee_name",
+  "column_break_3",
+  "date",
+  "section_break_5",
+  "from_date",
+  "column_break_7",
+  "to_date",
+  "workflow_delegation_details_section",
+  "workflow_delegation_details",
+  "section_break_11",
+  "update_workflow_delegation_log",
+  "reference_page",
+  "reference_id",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "employee",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": " Employee",
+   "options": "Employee",
+   "reqd": 1
+  },
+  {
+   "fieldname": "employee_name",
+   "fieldtype": "Data",
+   "label": "Employee Name",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_3",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "date",
+   "fieldtype": "Date",
+   "label": "Date"
+  },
+  {
+   "fieldname": "section_break_5",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "from_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "From Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_7",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "to_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "To Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "workflow_delegation_details_section",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "workflow_delegation_details",
+   "fieldtype": "Table",
+   "label": "Workflow Delegation Details",
+   "options": "Workflow Delegation Details"
+  },
+  {
+   "fieldname": "section_break_11",
+   "fieldtype": "Section Break"
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "update_workflow_delegation_log",
+   "fieldtype": "Table",
+   "label": "Update Workflow Delegation Log",
+   "options": "Update Workflow Delegation Log"
+  },
+  {
+   "fieldname": "reference_page",
+   "fieldtype": "Link",
+   "label": "Reference Page",
+   "options": "DocType",
+   "read_only": 1
+  },
+  {
+   "fieldname": "reference_id",
+   "fieldtype": "Dynamic Link",
+   "label": "Reference ID",
+   "options": "reference_page",
+   "read_only": 1
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Workflow Delegation",
+   "print_hide": 1
+  }
+ ],
+ "is_submittable": 1,
+ "modified": "2021-06-29 08:33:53.427393",
+ "modified_by": "Administrator",
+ "module": "HRM",
+ "name": "Workflow Delegation",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

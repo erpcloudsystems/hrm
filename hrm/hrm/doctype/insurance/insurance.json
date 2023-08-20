@@ -1,0 +1,132 @@
+{
+ "autoname": "INSRNC/.#####",
+ "creation": "2018-08-24 14:50:31.757545",
+ "doctype": "DocType",
+ "document_type": "Document",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "insurance_no",
+  "insurance_start_date",
+  "class",
+  "column_break_4",
+  "insurance_amount",
+  "insurance_end_date",
+  "inactive",
+  "column_break_8",
+  "insurance_type",
+  "count",
+  "section_break_11",
+  "insurance_details",
+  "comment",
+  "comments"
+ ],
+ "fields": [
+  {
+   "fieldname": "insurance_no",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Insurance No",
+   "reqd": 1,
+   "unique": 1
+  },
+  {
+   "fieldname": "insurance_start_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Insurance Start Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "class",
+   "fieldtype": "Link",
+   "label": "Class",
+   "options": "Insurance Class"
+  },
+  {
+   "fieldname": "column_break_4",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "insurance_amount",
+   "fieldtype": "Int",
+   "in_list_view": 1,
+   "label": "Insurance Amount",
+   "reqd": 1
+  },
+  {
+   "fieldname": "insurance_end_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Insurance End Date",
+   "reqd": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "inactive",
+   "fieldtype": "Check",
+   "label": "Inactive"
+  },
+  {
+   "fieldname": "column_break_8",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "insurance_type",
+   "fieldtype": "Select",
+   "label": "Insurance Type",
+   "options": "Individual\nGroup"
+  },
+  {
+   "fieldname": "count",
+   "fieldtype": "Int",
+   "label": "Count",
+   "read_only": 1
+  },
+  {
+   "fieldname": "section_break_11",
+   "fieldtype": "Section Break",
+   "label": "Insurance Details"
+  },
+  {
+   "fieldname": "insurance_details",
+   "fieldtype": "Table",
+   "label": "Insurance Details",
+   "options": "Insurance Details",
+   "reqd": 1
+  },
+  {
+   "fieldname": "comment",
+   "fieldtype": "Section Break",
+   "label": "Comment"
+  },
+  {
+   "fieldname": "comments",
+   "fieldtype": "Small Text",
+   "label": "Comments"
+  }
+ ],
+ "modified": "2019-12-25 14:02:56.315895",
+ "modified_by": "Administrator",
+ "module": "HRM",
+ "name": "Insurance",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "show_name_in_global_search": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

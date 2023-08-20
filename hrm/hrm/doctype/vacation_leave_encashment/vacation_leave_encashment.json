@@ -1,0 +1,203 @@
+{
+ "autoname": "VLE-.#####",
+ "creation": "2019-05-22 10:07:46.405712",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "company",
+  "employee",
+  "date_of_joining",
+  "column_break_4",
+  "posting_date",
+  "employee_name",
+  "iqama_no",
+  "vacation_availability_section",
+  "from_date",
+  "days",
+  "balance_days",
+  "column_break_11",
+  "to_date",
+  "pay_days",
+  "amount",
+  "account_info_section",
+  "mode_of_payment",
+  "payment_account",
+  "column_break_17",
+  "expense_account",
+  "section_break_19",
+  "journal_entry",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fetch_from": "employee.company",
+   "fieldname": "company",
+   "fieldtype": "Link",
+   "in_standard_filter": 1,
+   "label": "Company",
+   "options": "Company",
+   "reqd": 1
+  },
+  {
+   "fieldname": "employee",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Employee",
+   "options": "Employee",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "employee.date_of_joining",
+   "fieldname": "date_of_joining",
+   "fieldtype": "Read Only",
+   "label": "Date of Joining"
+  },
+  {
+   "fieldname": "column_break_4",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "Today",
+   "fieldname": "posting_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Posting Date",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "employee.employee_name",
+   "fieldname": "employee_name",
+   "fieldtype": "Read Only",
+   "label": "Employee Name"
+  },
+  {
+   "fieldname": "iqama_no",
+   "fieldtype": "Read Only",
+   "label": "Iqama No"
+  },
+  {
+   "fieldname": "vacation_availability_section",
+   "fieldtype": "Section Break",
+   "label": "Vacation Availability"
+  },
+  {
+   "fieldname": "from_date",
+   "fieldtype": "Read Only",
+   "in_list_view": 1,
+   "label": "From Date"
+  },
+  {
+   "default": "0",
+   "fieldname": "days",
+   "fieldtype": "Float",
+   "label": "Days",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_11",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "to_date",
+   "fieldtype": "Date",
+   "label": "To Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "amount",
+   "fieldtype": "Currency",
+   "label": "Amount",
+   "options": "Company:company:default_currency",
+   "read_only": 1
+  },
+  {
+   "fieldname": "account_info_section",
+   "fieldtype": "Section Break",
+   "label": "Account Info"
+  },
+  {
+   "fieldname": "mode_of_payment",
+   "fieldtype": "Link",
+   "hidden": 1,
+   "label": "Mode of Payment",
+   "options": "Mode of Payment"
+  },
+  {
+   "fieldname": "payment_account",
+   "fieldtype": "Link",
+   "label": "Credit Account",
+   "options": "Account"
+  },
+  {
+   "fieldname": "column_break_17",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "expense_account",
+   "fieldtype": "Link",
+   "label": "Debit Account",
+   "options": "Account"
+  },
+  {
+   "fieldname": "section_break_19",
+   "fieldtype": "Section Break"
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "journal_entry",
+   "fieldtype": "Link",
+   "label": "Journal Entry",
+   "options": "Journal Entry",
+   "read_only": 1
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Vacation Leave Encashment",
+   "print_hide": 1,
+   "read_only": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "pay_days",
+   "fieldtype": "Float",
+   "label": "Pay Days"
+  },
+  {
+   "default": "0",
+   "fieldname": "balance_days",
+   "fieldtype": "Float",
+   "label": "Balance days",
+   "read_only": 1
+  }
+ ],
+ "is_submittable": 1,
+ "modified": "2020-05-29 18:04:17.937531",
+ "modified_by": "Administrator",
+ "module": "HRM",
+ "name": "Vacation Leave Encashment",
+ "name_case": "Title Case",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "show_name_in_global_search": 1,
+ "sort_field": "modified",
+ "sort_order": "ASC",
+ "track_changes": 1
+}

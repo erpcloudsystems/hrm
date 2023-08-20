@@ -1,0 +1,78 @@
+{
+ "creation": "2018-08-24 15:02:19.526820",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "employee",
+  "employee_name",
+  "employee_contribute",
+  "family_covered",
+  "eligible_class",
+  "column_break_7",
+  "inactive",
+  "remark"
+ ],
+ "fields": [
+  {
+   "fieldname": "employee",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Employee",
+   "options": "Employee",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "employee.employee_name",
+   "fieldname": "employee_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Employee Name",
+   "read_only": 1
+  },
+  {
+   "fieldname": "employee_contribute",
+   "fieldtype": "Currency",
+   "label": "Employee Contribution Amount"
+  },
+  {
+   "default": "0",
+   "fieldname": "family_covered",
+   "fieldtype": "Check",
+   "label": "Family Covered"
+  },
+  {
+   "fieldname": "eligible_class",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Eligible Class ",
+   "options": "Insurance Class"
+  },
+  {
+   "fieldname": "column_break_7",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "inactive",
+   "fieldtype": "Check",
+   "label": "Inactive"
+  },
+  {
+   "fieldname": "remark",
+   "fieldtype": "Text Editor",
+   "label": "Remark"
+  }
+ ],
+ "istable": 1,
+ "modified": "2019-12-25 15:18:36.906272",
+ "modified_by": "Administrator",
+ "module": "HRM",
+ "name": "Insurance Details",
+ "owner": "Administrator",
+ "permissions": [],
+ "quick_entry": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

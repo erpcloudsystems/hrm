@@ -1,0 +1,19 @@
+{
+ "content": null,
+ "creation": "2020-10-09 13:02:04.404932",
+ "docstatus": 0,
+ "doctype": "Page",
+ "idx": 0,
+ "modified": "2020-10-13 08:27:56.151561",
+ "modified_by": "Administrator",
+ "module": "HRM",
+ "name": "hr-dashboard",
+ "owner": "Administrator",
+ "page_name": "HR Dashboard",
+ "roles": [],
+ "script": null,
+ "standard": "Yes",
+ "style": null,
+ "system_page": 0,
+ "title": "HR Dashboard"
+}

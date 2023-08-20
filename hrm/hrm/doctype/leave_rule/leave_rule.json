@@ -1,0 +1,144 @@
+{
+ "autoname": "LR-.#####",
+ "creation": "2020-09-05 10:30:45.170927",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "leave_type",
+  "gender",
+  "is_slab_applicable",
+  "is_not_applicable_all_components",
+  "column_break_4",
+  "effective_from",
+  "max_leaves_allowed",
+  "section_break_1",
+  "frequency_based_on",
+  "compensation_rule",
+  "section_break_2",
+  "salary_compensation_component",
+  "section_break_12",
+  "checklist",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "leave_type",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Leave Type",
+   "options": "Leave Type",
+   "reqd": 1
+  },
+  {
+   "default": "0",
+   "description": "During this leave period, if the salary is based on any kind of slab dependent then click on checkbox",
+   "fieldname": "is_slab_applicable",
+   "fieldtype": "Check",
+   "label": "Compensation method - Is any Slab Dependent"
+  },
+  {
+   "fieldname": "gender",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Gender Applicable For",
+   "options": "Gender"
+  },
+  {
+   "fieldname": "column_break_4",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "Today",
+   "fieldname": "effective_from",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Effective From Date",
+   "reqd": 1
+  },
+  {
+   "depends_on": "eval: doc.is_slab_applicable",
+   "fieldname": "section_break_1",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Leave Rule",
+   "print_hide": 1,
+   "read_only": 1
+  },
+  {
+   "default": "0",
+   "description": "Dont check, if all the salary components are applicable for this leave type\nPlease check, when only selected components would be applicable for this leave type",
+   "fieldname": "is_not_applicable_all_components",
+   "fieldtype": "Check",
+   "label": "Only Selected Salary Components  are Applicable"
+  },
+  {
+   "fieldname": "salary_compensation_component",
+   "fieldtype": "Table",
+   "label": "Applicable salary components",
+   "options": "Salary Compensation Component"
+  },
+  {
+   "depends_on": "eval: doc.is_not_applicable_all_components",
+   "fieldname": "section_break_2",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "section_break_12",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "checklist",
+   "fieldtype": "Table",
+   "label": "List of Required Attachment in Leave Request",
+   "options": "Checklist"
+  },
+  {
+   "fieldname": "frequency_based_on",
+   "fieldtype": "Select",
+   "label": "Frequency based on",
+   "options": "\nNumber of Days availed\nNumber of Months worked\nNumber of Years worked"
+  },
+  {
+   "fieldname": "compensation_rule",
+   "fieldtype": "Table",
+   "label": "Compensation Rule",
+   "options": "Compensation Rule Slab"
+  },
+  {
+   "depends_on": "eval: doc.leave_type",
+   "fieldname": "max_leaves_allowed",
+   "fieldtype": "Int",
+   "label": "Max Leaves Allowed"
+  }
+ ],
+ "is_submittable": 1,
+ "modified": "2020-09-11 16:16:34.971160",
+ "modified_by": "Administrator",
+ "module": "HRM",
+ "name": "Leave Rule",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "title_field": "leave_type",
+ "track_changes": 1
+}

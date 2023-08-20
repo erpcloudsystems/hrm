@@ -1,0 +1,180 @@
+{
+ "autoname": "OTR-.#####",
+ "creation": "2021-02-16 09:32:24.575096",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "applicant",
+  "applicant_name",
+  "apply_overtime_without_any_attendance_punches",
+  "column_break_4",
+  "status",
+  "ot_request_date",
+  "section_break_5",
+  "from_time",
+  "ot_hours_minutes",
+  "ot_hours_time",
+  "ot_hours",
+  "column_break_8",
+  "to_time",
+  "ot_value",
+  "section_break_11",
+  "project",
+  "column_break_13",
+  "reason",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "depends_on": "eval: doc.applicant",
+   "fetch_from": "applicant.employee_name",
+   "fieldname": "applicant_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Applicant Name",
+   "read_only": 1
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "OT Request",
+   "print_hide": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "applicant",
+   "fieldtype": "Link",
+   "in_standard_filter": 1,
+   "label": "Applicant",
+   "options": "Employee",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_4",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "Today",
+   "fieldname": "ot_request_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "OT Request Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "section_break_5",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "from_time",
+   "fieldtype": "Time",
+   "label": "From Time",
+   "reqd": 1
+  },
+  {
+   "fieldname": "to_time",
+   "fieldtype": "Time",
+   "label": "To Time",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_8",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "ot_hours",
+   "fieldtype": "Float",
+   "hidden": 1,
+   "label": "OT Hours",
+   "read_only": 1
+  },
+  {
+   "fieldname": "section_break_11",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "project",
+   "fieldtype": "Link",
+   "label": "Project",
+   "options": "Project"
+  },
+  {
+   "fieldname": "column_break_13",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "reason",
+   "fieldtype": "Small Text",
+   "label": "Reason"
+  },
+  {
+   "default": "0",
+   "fieldname": "ot_value",
+   "fieldtype": "Currency",
+   "label": "OT Value",
+   "read_only": 1
+  },
+  {
+   "default": "Open",
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Status",
+   "options": "Open\nApproved\nRejected\nCancelled",
+   "reqd": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "ot_hours_minutes",
+   "fieldtype": "Int",
+   "hidden": 1,
+   "label": "OT Hours (In Minutes)",
+   "read_only": 1
+  },
+  {
+   "default": "00:00",
+   "fieldname": "ot_hours_time",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "OT hours",
+   "read_only": 1
+  },
+  {
+   "default": "0",
+   "description": "If checked then the overtime request can be applied without considering the biometric punches. This facility is applicable if an employee works on overtime during on annual vacation or on any other leaves or on Holidays or on Week-off days either by work from home or by re-present in office after the shift time",
+   "fieldname": "apply_overtime_without_any_attendance_punches",
+   "fieldtype": "Check",
+   "label": "Apply overtime without any attendance punches"
+  }
+ ],
+ "is_submittable": 1,
+ "modified": "2021-05-22 08:41:06.411094",
+ "modified_by": "Administrator",
+ "module": "HRM",
+ "name": "OT Request",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "amend": 1,
+   "cancel": 1,
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

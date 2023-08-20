@@ -1,0 +1,58 @@
+{
+ "allow_copy": 1,
+ "creation": "2020-08-21 12:22:57.329529",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "filter_section_section",
+  "employee",
+  "section_break_2",
+  "dashboard"
+ ],
+ "fields": [
+  {
+   "fieldname": "dashboard",
+   "fieldtype": "HTML",
+   "label": "Dashboard"
+  },
+  {
+   "fieldname": "employee",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Employee",
+   "options": "Employee",
+   "reqd": 1
+  },
+  {
+   "fieldname": "section_break_2",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "filter_section_section",
+   "fieldtype": "Section Break",
+   "hidden": 1
+  }
+ ],
+ "hide_toolbar": 1,
+ "issingle": 1,
+ "modified": "2020-10-07 10:39:56.134472",
+ "modified_by": "Administrator",
+ "module": "HRM",
+ "name": "Employee Portal",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "print": 1,
+   "read": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC"
+}

@@ -1,0 +1,123 @@
+{
+ "autoname": "OT-.#####",
+ "creation": "2020-09-23 08:35:07.232074",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "minimum_ot_limit",
+  "default_ot_allowed_in_a_day",
+  "working_day_ot_rate",
+  "violation_action",
+  "column_break_3",
+  "ot_slab",
+  "maximum_ot_allowed_in_a_day",
+  "non_working_day_ot_rate",
+  "holiday_ot_rate",
+  "section_break_10",
+  "include_early_coming_ot",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "minimum_ot_limit",
+   "fieldtype": "Int",
+   "in_list_view": 1,
+   "label": "Minimum OT Limit (In Minute)",
+   "reqd": 1
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "OT Rule",
+   "print_hide": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "maximum_ot_allowed_in_a_day",
+   "fieldtype": "Int",
+   "label": "Maximum OT allowed in a Day (In Minute)",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_3",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "ot_slab",
+   "fieldtype": "Int",
+   "in_list_view": 1,
+   "label": "OT Consider in Multiples of (In Minute)",
+   "reqd": 1
+  },
+  {
+   "fieldname": "working_day_ot_rate",
+   "fieldtype": "Float",
+   "label": "Working Day OT Rate",
+   "reqd": 1
+  },
+  {
+   "fieldname": "non_working_day_ot_rate",
+   "fieldtype": "Float",
+   "label": "WeeklyOff OT Rate",
+   "reqd": 1
+  },
+  {
+   "fieldname": "default_ot_allowed_in_a_day",
+   "fieldtype": "Int",
+   "label": "Default OT allowed in a Day  (In Minute)",
+   "reqd": 1
+  },
+  {
+   "description": "Default action to take if actual OT exceed from  Approved OT allowed in OT Planner",
+   "fieldname": "violation_action",
+   "fieldtype": "Select",
+   "label": "Violation Action",
+   "options": "Violation approval required\nConsider Approved OT allowed"
+  },
+  {
+   "fieldname": "holiday_ot_rate",
+   "fieldtype": "Float",
+   "label": "Holiday OT Rate",
+   "reqd": 1
+  },
+  {
+   "fieldname": "section_break_10",
+   "fieldtype": "Section Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "include_early_coming_ot",
+   "fieldtype": "Check",
+   "label": "Consider Early coming as OT"
+  }
+ ],
+ "is_submittable": 1,
+ "modified": "2021-03-06 09:50:31.213142",
+ "modified_by": "Administrator",
+ "module": "HRM",
+ "name": "OT Rule",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "amend": 1,
+   "cancel": 1,
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

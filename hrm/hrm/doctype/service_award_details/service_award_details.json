@@ -1,0 +1,68 @@
+{
+ "creation": "2019-01-29 08:45:04.767588",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "eos_benefit_type",
+  "benefit_type",
+  "tenure_upto",
+  "formula",
+  "column_break_5",
+  "help"
+ ],
+ "fields": [
+  {
+   "depends_on": "eos_benefit_type",
+   "fetch_from": "eos_benefit_type.benefit_type",
+   "fieldname": "benefit_type",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Benefit Type",
+   "read_only": 1
+  },
+  {
+   "fieldname": "tenure_upto",
+   "fieldtype": "Int",
+   "in_list_view": 1,
+   "label": "Tenure Upto (In Days)",
+   "reqd": 1
+  },
+  {
+   "fieldname": "formula",
+   "fieldtype": "Small Text",
+   "in_list_view": 1,
+   "label": "Formula",
+   "reqd": 1
+  },
+  {
+   "fieldname": "eos_benefit_type",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "EOS Benefit Type",
+   "options": "Benefit Type for EOS",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_5",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "help",
+   "fieldtype": "HTML",
+   "label": "Help",
+   "options": "<h3>Help  for Formula</h3>\n\n<p>Notes:</p>\n\n<ol>\n<li>Use Tag <code>EDAYS</code> for using Total Working Days Excluding Absent of the Employee</li>\n<li>Use Tag <code>ECOMP</code> for using Total Benefit Component of the Employee. </li>\n</ol>"
+  }
+ ],
+ "istable": 1,
+ "modified": "2020-11-19 13:50:48.814034",
+ "modified_by": "Administrator",
+ "module": "HRM",
+ "name": "Service Award Details",
+ "owner": "Administrator",
+ "permissions": [],
+ "quick_entry": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

@@ -1,0 +1,163 @@
+{
+ "autoname": "WL.####",
+ "creation": "2018-05-29 15:48:46.639487",
+ "doctype": "DocType",
+ "document_type": "Document",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "employee_details",
+  "complaint_id",
+  "date",
+  "column_break_4",
+  "employee_id",
+  "employee_name",
+  "waring_details",
+  "warning_no",
+  "column_break_6",
+  "last_warning_date",
+  "warring_issued_by",
+  "details_of_offence",
+  "data_11",
+  "reason",
+  "reason_from_employee",
+  "corrective_measures",
+  "corrective_measure",
+  "deadline",
+  "corrective__measure_undertaken_by__the_employee",
+  "c_date",
+  "comments"
+ ],
+ "fields": [
+  {
+   "fieldname": "employee_details",
+   "fieldtype": "Section Break",
+   "label": "Employee Details"
+  },
+  {
+   "fieldname": "complaint_id",
+   "fieldtype": "Data",
+   "label": "Complaint ID",
+   "read_only": 1
+  },
+  {
+   "default": "Today",
+   "fieldname": "date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_4",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "employee_id",
+   "fieldtype": "Link",
+   "label": "Employee ID",
+   "options": "Employee"
+  },
+  {
+   "fieldname": "employee_name",
+   "fieldtype": "Data",
+   "label": "Employee Name"
+  },
+  {
+   "fieldname": "waring_details",
+   "fieldtype": "Section Break",
+   "label": "Warning Details"
+  },
+  {
+   "fieldname": "warning_no",
+   "fieldtype": "Data",
+   "label": "Warning No"
+  },
+  {
+   "fieldname": "column_break_6",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "last_warning_date",
+   "fieldtype": "Date",
+   "label": "Last Warning Date"
+  },
+  {
+   "fieldname": "warring_issued_by",
+   "fieldtype": "Data",
+   "label": "Warning Issued By"
+  },
+  {
+   "fieldname": "details_of_offence",
+   "fieldtype": "Section Break",
+   "label": "Details Of Offence"
+  },
+  {
+   "fieldname": "data_11",
+   "fieldtype": "Text Editor",
+   "label": "Details Of Offence "
+  },
+  {
+   "fieldname": "reason",
+   "fieldtype": "Section Break",
+   "label": "Reason"
+  },
+  {
+   "fieldname": "reason_from_employee",
+   "fieldtype": "Text Editor",
+   "label": "Reason From Employee"
+  },
+  {
+   "fieldname": "corrective_measures",
+   "fieldtype": "Section Break",
+   "label": "Corrective Measures"
+  },
+  {
+   "fieldname": "corrective_measure",
+   "fieldtype": "Text Editor",
+   "label": "Corrective Measure "
+  },
+  {
+   "fieldname": "deadline",
+   "fieldtype": "Date",
+   "label": "Deadline"
+  },
+  {
+   "fieldname": "corrective__measure_undertaken_by__the_employee",
+   "fieldtype": "Section Break",
+   "label": "Corrective  Measure Undertaken By  The Employee"
+  },
+  {
+   "fieldname": "c_date",
+   "fieldtype": "Date",
+   "label": "Date"
+  },
+  {
+   "fieldname": "comments",
+   "fieldtype": "Small Text",
+   "label": "Comments"
+  }
+ ],
+ "modified": "2019-12-25 12:14:00.117512",
+ "modified_by": "Administrator",
+ "module": "HRM",
+ "name": "Warning Letter",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

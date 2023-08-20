@@ -1,0 +1,56 @@
+{
+ "creation": "2019-10-16 10:25:01.208196",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "salary_component",
+  "default_amount",
+  "amount",
+  "vacation_amount"
+ ],
+ "fields": [
+  {
+   "fieldname": "salary_component",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Component",
+   "options": "Salary Component",
+   "read_only": 1,
+   "reqd": 1
+  },
+  {
+   "fieldname": "default_amount",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "Default Amount",
+   "options": "Company:company:default_currency",
+   "read_only": 1
+  },
+  {
+   "fieldname": "amount",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "Current Period Amount",
+   "options": "Company:company:default_currency",
+   "read_only": 1
+  },
+  {
+   "fieldname": "vacation_amount",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "Vacation Amount",
+   "options": "Company:company:default_currency",
+   "read_only": 1
+  }
+ ],
+ "istable": 1,
+ "modified": "2020-05-19 13:27:42.565159",
+ "modified_by": "Administrator",
+ "module": "HRM",
+ "name": "Vacation Closing Component",
+ "owner": "Administrator",
+ "permissions": [],
+ "quick_entry": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC"
+}
