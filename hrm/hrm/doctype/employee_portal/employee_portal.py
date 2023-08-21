@@ -8,7 +8,7 @@ from frappe import _
 from frappe.model.document import Document
 import json
 from collections import OrderedDict
-from erpnext.hr.doctype.leave_application.leave_application import get_leave_balance_on, get_leaves_for_period, get_pending_leaves_for_period
+from erpnext.hr.doctype.leave_application.leave_application import get_leave_balance_on, get_leaves_for_period#, get_pending_leaves_for_period
 from frappe.utils import flt, nowdate, getdate, get_first_day, get_last_day, formatdate, now_datetime
 from datetime import datetime
 from hrm.custom_methods import get_leve_name
@@ -329,13 +329,13 @@ def get_leave_details(employee, date):
 			consider_all_leaves_in_the_allocation_period=True)
 		end_date = allocation.to_date
 		leaves_taken = get_leaves_for_period(employee, d, allocation.from_date, end_date) * -1
-		leaves_pending = get_pending_leaves_for_period(employee, d, allocation.from_date, end_date)
+		#leaves_pending = get_pending_leaves_for_period(employee, d, allocation.from_date, end_date)
 
 		leave_allocation[d] = {
 			"current_year_allocation": allocation.new_leaves_allocated,
 			"balance_carry_foward": allocation.unused_leaves,
 			"leaves_taken": leaves_taken,
-			"pending_leaves": leaves_pending,
+			#"pending_leaves": leaves_pending,
 			"remaining_leaves": remaining_leaves}
 
 	return leave_allocation
