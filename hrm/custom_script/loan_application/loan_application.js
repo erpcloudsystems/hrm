@@ -42,7 +42,7 @@ frappe.ui.form.on("Loan Application", {
 		frm.set_value('existing_loan_amount', 0);
 		if (!frm.doc.applicant) return;
 		frappe.call({
-			method: 'hrm.custom_script.loan_application.loan_application.get_balance_loan',
+			method: 'hrm.doctype_triggers.loan_application.loan_application.get_balance_loan',
 			args: {
 				applicant: frm.doc.applicant
 			},
@@ -60,7 +60,7 @@ frappe.ui.form.on("Loan Application", {
 		frm.set_value('eos_amount', 0);
 		if (!frm.doc.applicant || !frm.doc.required_by_date || !frm) return;
 		frappe.call({
-			method: 'hrm.custom_script.loan_application.loan_application.eos_amount',
+			method: 'hrm.doctype_triggers.hr.loan_application.loan_application.eos_amount',
 			args: {
 				applicant: frm.doc.applicant,
 				required_date: frm.doc.required_by_date,

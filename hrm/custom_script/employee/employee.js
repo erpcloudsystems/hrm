@@ -82,7 +82,7 @@ frappe.ui.form.on("Employee", {
 		}
 		
 		frappe.call({
-			method: "hrm.custom_script.employee.employee.fetch_child",
+			method: "hrm.doctype_triggers.hr.employee.employee.fetch_child",
 			args:
 			{
 				"templete": frm.doc.template,

@@ -17,7 +17,7 @@ frappe.ui.form.on('Timesheet', {
         }
         $.each(items,function(i,entry){
             frappe.call({
-                method:'hrm.custom_script.timesheet.timesheet.set_check',
+                method:'hrm.doctype_triggers.hr.timesheet.timesheet.set_check',
                 async:true,
                 args:{employee:cur_frm.doc.employee,
                     from_time:entry.from_time,

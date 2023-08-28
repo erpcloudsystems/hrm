@@ -14,7 +14,7 @@ frappe.ui.form.on('Vacation Leave Application', {
 
 		frm.set_query("leave_approver", () => {
 			return {
-				query: "erpnext.hr.doctype.department_approver.department_approver.get_approvers",
+				query: "hrms.hr.doctype.department_approver.department_approver.get_approvers",
 				filters: {
 					employee: frm.doc.employee_id,
 					doctype: 'Leave Application'
@@ -105,7 +105,7 @@ frappe.ui.form.on('Vacation Leave Application', {
 		if(frm.doc.employee_id) {
 			// server call is done to include holidays in leave days calculations
 			return frappe.call({
-				method: 'erpnext.hr.doctype.leave_application.leave_application.get_leave_approver',
+				method: 'hrms.hr.doctype.leave_application.leave_application.get_leave_approver',
 				args: {
 					"employee": frm.doc.employee_id,
 				},

@@ -7,7 +7,7 @@ console.log("in")
 
         
         frappe.call({
-            method: "hrm.custom_script.shift_request.shift_request.oncancel",
+            method: "hrm.doctype_triggers.hr.shift_request.shift_request.oncancel",
             async:false,
             args: {
                 "shift_allocation":cur_frm.doc.shift_allocations

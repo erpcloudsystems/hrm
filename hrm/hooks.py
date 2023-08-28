@@ -10,7 +10,7 @@ app_icon = "octicon octicon-file-directory"
 app_color = "grey"
 app_email = "avu.etoserp.com"
 app_license = "MIT"
-fixtures = ['Custom Field', 'Property Setter']
+fixtures = ["Custom Field", "Property Setter"]
 
 # Includes in <head>
 # ------------------
@@ -28,27 +28,27 @@ app_include_js = ["//cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"]
 
 # include js in doctype views
 doctype_js = {
-	"Employee": ["custom_script/employee/employee.js"],
-	"Company": ["custom_script/company/company.js"],
-	"Attendance": ["custom_script/attendance/attendance.js"],
-	"Salary Slip": ["custom_script/salary_slip/salary_slip.js"],
-	"Leave Application": "custom_script/leave_application/leave_application.js",
-	"Payroll Entry": "custom_script/payroll_entry/payroll_entry.js",
-	"Designation": "custom_script/designation/designation.js",
-	"Holiday List": "custom_script/holiday_list/holiday_list.js",
-	"Loan Application": "custom_script/loan_application/loan_application.js",
-	"Shift Request": "custom_script/shift_request/shift_request.js",
-	"Shift Type": "custom_script/shift_type/shift_type.js",
-	"Timesheet": "custom_script/timesheet/timesheet.js",
-	"Loan": "custom_script/Loan/Loan.js"
+    "Employee": ["doctype_triggers/hr/employee/employee.js"],
+    "Company": ["doctype_triggers/hr/company/company.js"],
+    "Attendance": ["doctype_triggers/hr/attendance/attendance.js"],
+    "Salary Slip": ["doctype_triggers/hr/salary_slip/salary_slip.js"],
+    "Leave Application": "doctype_triggers/hr/leave_application/leave_application.js",
+    "Payroll Entry": "doctype_triggers/hr/payroll_entry/payroll_entry.js",
+    "Designation": "doctype_triggers/hr/designation/designation.js",
+    "Holiday List": "doctype_triggers/hr/holiday_list/holiday_list.js",
+    "Loan Application": "doctype_triggers/hr/loan_application/loan_application.js",
+    "Shift Request": "doctype_triggers/hr/shift_request/shift_request.js",
+    "Shift Type": "doctype_triggers/hr/shift_type/shift_type.js",
+    "Timesheet": "doctype_triggers/hr/timesheet/timesheet.js",
+    "Loan": "doctype_triggers/hr/Loan/Loan.js",
 }
 
 doctype_list_js = {
-	"Loan Application": "custom_script/loan_application/loan_application_list.js",
-	"Attendance" : "custom_script/attendance/attendance_list.js"
+    "Loan Application": "doctype_triggers/hr/loan_application/loan_application_list.js",
+    "Attendance": "doctype_triggers/hr/attendance/attendance_list.js",
 }
 override_doctype_class = {
-	"Shift Assignment": "hrm.custom_script.shift_assignment.shift_assignment.CustomShiftAssignment"
+    "Shift Assignment": "hrm.doctype_triggers.hr.shift_assignment.shift_assignment.CustomShiftAssignment"
 }
 # doctype_tree_js = {"doctype" : "public/js/doctype_tree.js"}
 # doctype_calendar_js = {"doctype" : "public/js/doctype_calendar.js"}
@@ -61,7 +61,7 @@ override_doctype_class = {
 
 # website user home page (by Role)
 # role_home_page = {
-#	"Role": "home_page"
+# 	"Role": "home_page"
 # }
 
 # Website user home page (by function)
@@ -102,88 +102,86 @@ override_doctype_class = {
 # Hook on document methods and events
 
 doc_events = {
-	"Employee": {
-		"onload": ["hrm.custom_script.employee.employee.onload"],
-		"validate": ["hrm.custom_script.employee.employee.validate"]
-	},
-	"Payroll Period": {
-		"validate": "hrm.custom_script.payroll_period.payroll_period.validate"
-	},
-	"Salary Slip": {
-		"validate" : "hrm.custom_script.salary_slip.salary_slip.validate"
-		# "after_insert" : ["hrm.custom_script.salary_slip.salary_slip.after_insert"],
-		# "on_submit" : ["hrm.custom_script.salary_slip.salary_slip.on_submit"],
-		# "on_cancel" : ["hrm.custom_script.salary_slip.salary_slip.on_cancel"],
-		# "on_trash" : ["hrm.custom_script.salary_slip.salary_slip.on_trash"]
-	},
-	"Attendance": {
-		"validate": "hrm.custom_script.attendance.attendance.validate",
-		"on_cancel": "hrm.custom_script.attendance.attendance.on_cancel",
-		"after_insert": "hrm.custom_script.attendance.attendance.after_insert",
-	# 	"on_submit": ["hrm.custom_script.attendance.attendance.on_submit"],
-	# 	"before_cancel": ["hrm.custom_script.attendance.attendance.before_cancel"],
-		"on_trash": ["hrm.custom_script.attendance.attendance.on_trash"],
-	# 	"on_change": ["hrm.custom_script.attendance.attendance.on_change"]
-	},
-	'Timesheet': {
-		"on_submit": "hrm.custom_script.timesheet.timesheet.on_submit",
-		# "on_submit": "hrm.custom_script.timesheet.timesheet.create_attendance"
-        "on_cancel":"hrm.custom_script.timesheet.timesheet.on_cancel",
-        "validate":"hrm.custom_script.timesheet.timesheet.validate",
-        "before_save":"hrm.custom_script.timesheet.timesheet.before_save"
-	},
-	'Employee Checkin': {
-		"validate": "hrm.custom_script.employee_checkin.employee_checkin.validate"
-	},
-	'Loan Application': {
-		"validate": "hrm.custom_script.loan_application.loan_application.validate"
-	},
-	'Loan Type': {
-		"validate": "hrm.custom_script.loan_type.loan_type.validate"
-	},
-	'Leave Type': {
-		"on_change": "hrm.custom_script.leave_type.leave_type.on_change",
-		"on_trash": "hrm.custom_script.leave_type.leave_type.on_trash"
-	},
+    "Employee": {
+        "onload": ["hrm.doctype_triggers.hr.employee.employee.onload"],
+        "validate": ["hrm.doctype_triggers.hr.employee.employee.validate"],
+    },
+    "Payroll Period": {
+        "validate": "hrm.doctype_triggers.hr.payroll_period.payroll_period.validate"
+    },
+    "Salary Slip": {
+        "validate": "hrm.doctype_triggers.hr.salary_slip.salary_slip.validate"
+        # "after_insert" : ["hrm.doctype_triggers.salary_slip.salary_slip.after_insert"],
+        # "on_submit" : ["hrm.doctype_triggers.salary_slip.salary_slip.on_submit"],
+        # "on_cancel" : ["hrm.doctype_triggers.salary_slip.salary_slip.on_cancel"],
+        # "on_trash" : ["hrm.doctype_triggers.salary_slip.salary_slip.on_trash"]
+    },
+    "Attendance": {
+        "validate": "hrm.doctype_triggers.hr.attendance.attendance.validate",
+        "on_cancel": "hrm.doctype_triggers.hr.attendance.attendance.on_cancel",
+        "after_insert": "hrm.doctype_triggers.hr.attendance.attendance.after_insert",
+        # 	"on_submit": ["hrm.doctype_triggers.attendance.attendance.on_submit"],
+        # 	"before_cancel": ["hrm.doctype_triggers.attendance.attendance.before_cancel"],
+        "on_trash": ["hrm.doctype_triggers.hr.attendance.attendance.on_trash"],
+        # 	"on_change": ["hrm.doctype_triggers.attendance.attendance.on_change"]
+    },
+    "Timesheet": {
+        "on_submit": "hrm.doctype_triggers.hr.timesheet.timesheet.on_submit",
+        # "on_submit": "hrm.doctype_triggers.timesheet.timesheet.create_attendance"
+        "on_cancel": "hrm.doctype_triggers.hr.timesheet.timesheet.on_cancel",
+        "validate": "hrm.doctype_triggers.hr.timesheet.timesheet.validate",
+        "before_save": "hrm.doctype_triggers.hr.timesheet.timesheet.before_save",
+    },
+    "Employee Checkin": {
+        "validate": "hrm.doctype_triggers.hr.employee_checkin.employee_checkin.validate"
+    },
+    "Loan Application": {
+        "validate": "hrm.doctype_triggers.hr.loan_application.loan_application.validate"
+    },
+    "Loan Type": {"validate": "hrm.doctype_triggers.hr.loan_type.loan_type.validate"},
+    "Leave Type": {
+        "on_change": "hrm.doctype_triggers.hr.leave_type.leave_type.on_change",
+        "on_trash": "hrm.doctype_triggers.hr.leave_type.leave_type.on_trash",
+    },
     # 'Shift Request':{
-    #     "on_cancel":"hrm.custom_script.shift_request.shift_request.oncancel"
+    #     "on_cancel":"hrm.doctype_triggers.shift_request.shift_request.oncancel"
     # }
-	"Leave Application": {
-		"validate": "hrm.custom_script.leave_application.leave_application.validate",
-		"before_cancel": "hrm.custom_script.leave_application.leave_application.before_cancel",
-		"on_cancel": "hrm.custom_script.leave_application.leave_application.on_cancel",
-		"on_trash": "hrm.custom_script.leave_application.leave_application.on_trash",
-        "before_save" : "hrm.custom_script.leave_application.leave_application.get_user_role",
-		# "before_cancel" :"hrm.custom_script.leave_application.leave_application.cancel_wf_doc",
-		# "on_trash":"hrm.custom_script.leave_application.leave_application.delete_wf",
-		"before_submit":"hrm.custom_script.leave_application.leave_application.get_user_role_validation"
-	},
-	"Loan": {
-		"validate": "hrm.custom_script.loan.loan.validate",
-		"on_cancel": "hrm.custom_script.loan.loan.on_cancel",
-		"on_trash": ["hrm.custom_script.loan.loan.on_trash"],
-	},
+    "Leave Application": {
+        "validate": "hrm.doctype_triggers.hr.leave_application.leave_application.validate",
+        "before_cancel": "hrm.doctype_triggers.hr.leave_application.leave_application.before_cancel",
+        "on_cancel": "hrm.doctype_triggers.hr.leave_application.leave_application.on_cancel",
+        "on_trash": "hrm.doctype_triggers.hr.leave_application.leave_application.on_trash",
+        "before_save": "hrm.doctype_triggers.hr.leave_application.leave_application.get_user_role",
+        # "before_cancel" :"hrm.doctype_triggers.leave_application.leave_application.cancel_wf_doc",
+        # "on_trash":"hrm.doctype_triggers.leave_application.leave_application.delete_wf",
+        "before_submit": "hrm.doctype_triggers.hr.leave_application.leave_application.get_user_role_validation",
+    },
+    "Loan": {
+        "validate": "hrm.doctype_triggers.hr.loan.loan.validate",
+        "on_cancel": "hrm.doctype_triggers.hr.loan.loan.on_cancel",
+        "on_trash": ["hrm.doctype_triggers.hr.loan.loan.on_trash"],
+    },
 }
 
 # Scheduled Tasks
 # ---------------
 
 scheduler_events = {
-	# "all": [
-	# 	"hrm.tasks.all"
-	# ],
-	"daily": [
-		"hrm.hrm.doctype.workflow_delegation.workflow_delegation.assign_delegated_role"
-	],
-	"hourly": [
-		"hrm.custom_script.attendance.holiday_attendance.holiday_attendance"
-	],
-	# "weekly": [
-	# 	"hrm.tasks.weekly"
-	# ]
-	# "monthly": [
-	# 	"hrm.tasks.monthly"
-	# ]
+    # "all": [
+    # 	"hrm.tasks.all"
+    # ],
+    "daily": [
+        "hrm.hrm.doctype.workflow_delegation.workflow_delegation.assign_delegated_role"
+    ],
+    "hourly": [
+        "hrm.doctype_triggers.hr.attendance.holiday_attendance.holiday_attendance"
+    ],
+    # "weekly": [
+    # 	"hrm.tasks.weekly"
+    # ]
+    # "monthly": [
+    # 	"hrm.tasks.monthly"
+    # ]
 }
 
 # Testing
@@ -204,4 +202,3 @@ scheduler_events = {
 # override_doctype_dashboards = {
 # 	"Task": "hrm.task.get_dashboard_data"
 # }
-

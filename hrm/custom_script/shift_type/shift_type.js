@@ -6,7 +6,7 @@ frappe.ui.form.on('Shift Type', {
 	weekoff: function(frm) {
 		frm.add_custom_button(__('Mark Holiday Attendance'), () => {
 			frappe.call({
-				method: 'hrm.custom_script.attendance.holiday_attendance.holiday_attendance',
+				method: 'hrm.doctype_triggers.hr.attendance.holiday_attendance.holiday_attendance',
 				args: {
 					process: 1,
 					shift: frm.doc.name

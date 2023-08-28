@@ -10,7 +10,7 @@ from hrm.custom_methods import get_leve_name
 from frappe.utils import flt, date_diff, formatdate, add_days, getdate, add_months, add_years, get_first_day
 from copy import deepcopy
 from frappe.model.workflow import apply_workflow
-from hrm.custom_script.leave_application.leave_application import validate_leave_overlap
+from hrm.doctype_triggers.hr.leave_application.leave_application import validate_leave_overlap
 
 class OverlapError(frappe.ValidationError): pass
 

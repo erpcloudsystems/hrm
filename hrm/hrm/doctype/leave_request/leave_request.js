@@ -8,7 +8,7 @@ frappe.ui.form.on("Leave Request", {
 	setup: function(frm) {
 		frm.set_query("leave_approver", function() {
 			return {
-				query: "erpnext.hr.doctype.department_approver.department_approver.get_approvers",
+				query: "hrms.hr.doctype.department_approver.department_approver.get_approvers",
 				filters: {
 					employee: frm.doc.employee,
 					doctype: frm.doc.doctype
@@ -273,7 +273,7 @@ frappe.ui.form.on("Leave Request", {
 		}
 		// if(frm.doc.docstatus==0 && frm.doc.employee && frm.doc.leave_type && frm.doc.from_date && frm.doc.to_date) {
 		// 	return frappe.call({
-		// 		method: "erpnext.hr.doctype.leave_application.leave_application.get_leave_balance_on",
+		// 		method: "hrms.hr.doctype.leave_application.leave_application.get_leave_balance_on",
 		// 		args: {
 		// 			employee: frm.doc.employee,
 		// 			leave_type: frm.doc.leave_type,
