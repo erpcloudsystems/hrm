@@ -5,16 +5,17 @@
 from __future__ import unicode_literals
 import frappe
 from frappe import _
+
 # from hrms.hr.doctype.employee_checkin.employee_checkin import calculate_working_hours
 from frappe.utils import flt, cint, get_datetime, add_days, getdate, formatdate
 
 from datetime import timedelta
 
 from hrm.hrm.doctype.ot_planner.ot_planner import applied_ot_rule
-from hrm.doctype_triggers.hr.employee_checkin.employee_checkin import get_employee_shift
+from hrm.custom_script.employee_checkin.employee_checkin import get_employee_shift
 from hrm.custom_methods import get_leve_name
 from hrm import *
-from hrm.doctype_triggers.common_code import raise_link_exists_exception
+from hrm.custom_script.common_code import raise_link_exists_exception
 
 
 def validate(doc, method):

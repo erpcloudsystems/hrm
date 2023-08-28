@@ -8,7 +8,7 @@ from frappe import _
 
 # from frappe.model.delete_doc import raise_link_exists_exception
 from frappe.utils import cint, flt, getdate, formatdate
-from hrm.doctype_triggers.common_code import raise_link_exists_exception
+from hrm.custom_script.common_code import raise_link_exists_exception
 
 
 class OverlapError(frappe.ValidationError):

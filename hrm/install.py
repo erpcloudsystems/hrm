@@ -4,7 +4,7 @@ import json
 import os
 
 # from frappe.custom.doctype.custom_field.custom_field import create_custom_fields
-# from hrm.doctype_triggers.hr.leave_type.default_leave_type import DEFAULT_LEAVE_TYPE
+# from hrm.custom_script.leave_type.default_leave_type import DEFAULT_LEAVE_TYPE
 
 
 def after_install():

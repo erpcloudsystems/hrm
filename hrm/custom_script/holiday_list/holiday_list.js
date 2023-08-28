@@ -4,7 +4,7 @@
 frappe.ui.form.on('Holiday List', {
 	get_weekly_off_dates: function(frm) {
 		frappe.call({
-			method: 'hrm.doctype_triggers.hr.holiday_list.holiday_list.update_weekoff',
+			method: 'hrm.custom_script.holiday_list.holiday_list.update_weekoff',
 			args: {
 				'doc': frm.doc
 			},

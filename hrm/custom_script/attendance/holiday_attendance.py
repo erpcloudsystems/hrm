@@ -9,8 +9,8 @@ from frappe import _
 # from hrms.hr.doctype.attendance.attendance import mark_absent
 from frappe.utils import nowdate, add_days, getdate, date_diff
 
-from hrm.doctype_triggers.hr.employee_checkin.employee_checkin import get_employee_shift
-from hrm.doctype_triggers.hr.attendance.attendance import weekoff_holiday
+from hrm.custom_script.employee_checkin.employee_checkin import get_employee_shift
+from hrm.custom_script.attendance.attendance import weekoff_holiday
 
 
 # @frappe.whitelist()

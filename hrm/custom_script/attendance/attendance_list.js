@@ -1,5 +1,4 @@
 // Copyright (c) 2020, avu and contributors
-// For license information, please see license.txt
 
 frappe.listview_settings['Attendance'] = {
 	// add_fields: ["status", "attendance_date", "leave_type"],

@@ -7,7 +7,7 @@ import frappe
 from frappe import _
 from dateutil.relativedelta import relativedelta
 from frappe.utils import getdate, get_first_day, get_last_day, formatdate
-from hrm.doctype_triggers.hr.salary_slip.salary_slip import (
+from hrm.custom_script.salary_slip.salary_slip import (
     get_actual_structure,
     get_payroll_period,
 )

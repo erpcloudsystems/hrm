@@ -159,10 +159,10 @@ class EarlyGoingRequest(Document):
         self.actual_number_of_minutes_late = attendance.get("early_going_minutes")
 
     def employee_checkin(self):
-        from hrm.doctype_triggers.hr.employee_checkin.employee_checkin import (
+        from hrm.custom_script.employee_checkin.employee_checkin import (
             get_employee_shift,
         )
-        from hrm.doctype_triggers.hr.attendance.attendance import early_going
+        from hrm.custom_script.attendance.attendance import early_going
 
         current_shift = get_employee_shift(
             employee=self.get("employee"),

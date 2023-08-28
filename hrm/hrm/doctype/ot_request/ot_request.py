@@ -20,12 +20,12 @@ from frappe.utils import (
 # from hrms.hr.doctype.employee_checkin.employee_checkin import time_diff_in_hours, calculate_working_hours
 from datetime import timedelta
 
-from hrm.doctype_triggers.hr.salary_slip.salary_slip import (
+from hrm.custom_script.salary_slip.salary_slip import (
     get_actual_structure,
     get_payroll_period,
 )
 
-# from hrm.doctype_triggers.hr.attendance.attendance import get_ot
+# from hrm.custom_script.attendance.attendance import get_ot
 from hrm.hrm.doctype.ot_planner.ot_planner import applied_ot_rule
 from hrm.custom_methods import get_comp_name
 from hrm import *
@@ -143,7 +143,7 @@ class OTRequest(Document):
             )
 
     def update_attendance(self, ot_min=0):
-        from hrm.doctype_triggers.hr.attendance.attendance import process_attendance
+        from hrm.custom_script.attendance.attendance import process_attendance
 
         attendance = self.attendance_processed()
         if not attendance:
@@ -204,7 +204,7 @@ class OTRequest(Document):
         self.get_ot_amt(ot_rule_doc)
 
     def get_ot_amt(self, ot_rule):
-        from hrm.doctype_triggers.hr.attendance.attendance import weekoff_holiday
+        from hrm.custom_script.attendance.attendance import weekoff_holiday
 
         start_date = get_first_day(self.get("ot_request_date"))
         end_date = get_last_day(start_date)
@@ -245,7 +245,7 @@ class OTRequest(Document):
                 for abbr in ["B", "BC", "BCI", "BSA"]
             ]
         )
-        from hrm.doctype_triggers.hr.employee_checkin.employee_checkin import (
+        from hrm.custom_script.employee_checkin.employee_checkin import (
             get_employee_shift,
         )
 
@@ -276,7 +276,7 @@ class OTRequest(Document):
         )
 
     def is_single_punch(self):
-        from hrm.doctype_triggers.hr.employee_checkin.employee_checkin import (
+        from hrm.custom_script.employee_checkin.employee_checkin import (
             get_employee_shift,
         )
 
@@ -320,7 +320,7 @@ class OTRequest(Document):
             )
 
     def get_attedance(self):
-        from hrm.doctype_triggers.hr.attendance.attendance import ot_worked
+        from hrm.custom_script.attendance.attendance import ot_worked
 
         attendance_list = frappe.db.sql(
             """select * from `tabAttendance` where docstatus=1 and employee="{0}" and attendance_date ='{1}'
@@ -344,7 +344,7 @@ class OTRequest(Document):
             ).strftime("%H:%M:%S")
 
     def attendance_ot(self, validate=0):
-        from hrm.doctype_triggers.hr.attendance.attendance import ot_worked
+        from hrm.custom_script.attendance.attendance import ot_worked
 
         attendance_list = frappe.db.sql(
             """select * from `tabAttendance` where docstatus=1 and employee="{0}" and attendance_date ='{1}'

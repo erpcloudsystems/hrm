@@ -24,7 +24,7 @@ from hrms.hr.doctype.leave_application.leave_application import (
     get_leave_balance_on,
 )
 from hrm.custom_methods import get_comp_name, get_leve_name
-from hrm.doctype_triggers.hr.salary_slip.salary_slip import (
+from hrm.custom_script.salary_slip.salary_slip import (
     get_actual_structure,
     get_payroll_period,
 )

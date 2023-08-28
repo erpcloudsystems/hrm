@@ -11,7 +11,7 @@ from hrm.hrm.doctype.vacation_leave_application.vacation_leave_application impor
     calculate_vacation,
 )
 from frappe.utils import getdate, add_days, get_first_day, get_last_day
-from hrm.doctype_triggers.hr.salary_slip.salary_slip import (
+from hrm.custom_script.salary_slip.salary_slip import (
     get_actual_structure,
     get_payroll_period,
 )

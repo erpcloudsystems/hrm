@@ -10,7 +10,7 @@ from frappe.utils import flt, rounded, add_months, nowdate
 from datetime import date
 from frappe.utils.data import get_first_day, add_days, date_diff, get_last_day, getdate
 from frappe.utils import cint, cstr, flt
-from hrm.doctype_triggers.hr.salary_slip.salary_slip import (
+from hrm.custom_script.salary_slip.salary_slip import (
     get_actual_structure,
     get_payroll_period,
 )
